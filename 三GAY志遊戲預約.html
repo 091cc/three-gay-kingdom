@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>三GAY志遊戲預約</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .spinner {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      border: 2px solid transparent;
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <section class="text-center py-20 bg-center" style="
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/China_old_map.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+">
+    <div class="bg-black bg-opacity-50 p-10">
+      <h1 class="text-5xl font-bold mb-4">三GAY志：將軍</h1>
+      <p class="text-xl mb-6">重返亂世，成就將軍霸業！</p>
+
+      <button id="showEmailForm" class="bg-yellow-500 hover:bg-yellow-600 text-black px-14 py-8 rounded-full font-semibold w-full mb-4">
+        立即預約
+      </button>
+
+      <button type="button" id="redeemButton2" class="bg-green-500 hover:bg-green-600 text-black font-semibold py-3 rounded w-1/2 mx-auto mt-4 block">
+        立即兌換限定表情包
+      </button>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-900 px-6">
+    <h2 class="text-3xl text-center font-bold mb-10">英雄人物介紹</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-gray-800 p-6 rounded-xl text-center flex flex-col">
+        <h3 class="text-xl font-semibold mb-2">楊老</h3>
+        <img src="https://i.imgur.com/AZK5a66.png" alt="楊老" class="mx-auto object-contain mb-4 rounded-lg" style="height: 390px;">
+        <p class="text-sm mb-3">錯！你錯了！咱們新疆的房子不輸台北...</p>
+        <ul class="text-sm text-left list-disc list-inside space-y-1">
+          <li>
+            根據地:
+            <img src="https://shorturl.at/CgON8" class="h-4 inline-block mx-1" alt="旗幟" />
+            中華民國新疆省
+          </li>
+          <li>技能：大力敲桌子使湯匙飛起來，以造成傷害。</li>
+        </ul>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl text-center flex flex-col">
+        <h3 class="text-xl font-semibold mb-2">郭將軍</h3>
+        <img src="https://i.imgur.com/J5oxe31.jpg" alt="郭將軍" class="mx-auto max-h-96 object-contain mb-4 rounded-lg">
+        <p class="text-sm mb-3">如果我在古代，我一定是個將軍...</p>
+        <ul class="text-sm text-left list-disc list-inside space-y-1 mb-auto">
+          <li class="flex items-center space-x-2">
+            <li>
+            根據地:
+            <img src="https://shorturl.at/CgON8" class="h-4 inline-block mx-1" alt="旗幟" />
+            中華民國臺灣省
+          </li>
+          <li>技能：大聲尖叫。</li>
+        </ul>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl text-center">
+        <img src="https://example.com/zhuge-liang.jpg" alt="未知" class="mx-auto w-40 h-40 object-cover rounded-full mb-4">
+        <h3 class="text-xl font-semibold">??</h3>
+        <p class="text-sm">未知</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reserve" class="py-16 bg-gray-800 px-6 hidden">
+    <h2 class="text-3xl text-center font-bold mb-10">立即預約</h2>
+    <form id="reservationForm" class="max-w-xl mx-auto bg-gray-700 p-8 rounded-lg space-y-6">
+      <div>
+        <label class="block mb-2">電子郵件</label>
+        <input type="email" id="email" class="w-full px-4 py-3 rounded bg-gray-600 text-white" placeholder="請輸入您的 Email" required>
+      </div>
+      <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 rounded">
+        送出預約
+      </button>
+      <div id="reservationResult" class="text-center mt-4"></div>
+    </form>
+  </section>
+
+  <section id="redeemSection" class="py-16 px-6 hidden scroll-mt-20">
+    <h2 class="text-3xl text-center font-bold mb-6">限定表情包兌換</h2>
+    <div class="max-w-md mx-auto bg-gray-700 p-8 rounded-lg space-y-4">
+      <label class="block text-lg mb-2 font-medium" for="stickerCode">輸入兌換碼</label>
+      <input
+        maxlength="9"
+        type="text"
+        id="stickerCode"
+        autocomplete="off"
+        inputmode="text"
+        class="w-full px-4 py-3 rounded bg-gray-600 text-white"
+        placeholder="輸入兌換碼"
+        oninput="filterCodeInput()"
+      />
+      <button id="redeemButton" class="w-full bg-green-500 hover:bg-green-600 text-black font-semibold py-3 rounded">
+        立即兌換
+      </button>
+      <div id="redeemResult" class="text-center mt-4"></div>
+      <div class="flex justify-center">
+        <a
+          id="downloadStickerBtn"
+          href="https://example.com/sticker-pack.zip"
+          download
+          class="hidden mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+        >
+          下載表情包
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-center py-6">
+    <p class="mb-4">關注我們：</p>
+    <div class="flex justify-center space-x-6">
+      <a href="#" class="hover:text-yellow-400">Facebook</a>
+      <a href="#" class="hover:text-yellow-400">X</a>
+      <a href="#" class="hover:text-yellow-400">YouTube</a>
+    </div>
+    <p class="text-sm mt-4 text-gray-500">© 2025 三GAY志遊戲開發團隊 (STR network Present)</p>
+  </footer>
+
+  <script>
+    const showEmailFormButton = document.getElementById('showEmailForm');
+    const reserveSection = document.getElementById('reserve');
+    const reservationForm = document.getElementById('reservationForm');
+    const reservationResult = document.getElementById('reservationResult');
+
+    const redeemSection = document.getElementById('redeemSection');
+    const redeemBtn = document.getElementById('redeemButton');
+    const redeemBtn2 = document.getElementById('redeemButton2');
+    const stickerCodeInput = document.getElementById('stickerCode');
+    const redeemResult = document.getElementById('redeemResult');
+    const correctStickerCode = ["GAYGAY666", "GAYGAY024"];
+    const downloadBtn = document.getElementById('downloadStickerBtn');
+
+    showEmailFormButton.addEventListener('click', function () {
+      reserveSection.classList.remove('hidden');
+      reserveSection.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    redeemBtn2.addEventListener('click', () => {
+      redeemSection.classList.remove('hidden');
+      redeemSection.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    reservationForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      downloadBtn.classList.add('hidden');
+
+      const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if (!emailValid) {
+        reservationResult.textContent = "❌ 請輸入有效的電子郵件地址。";
+        reservationResult.className = "text-red-400 text-center mt-6";
+      } else {
+        reservationResult.textContent = "✅ 預約成功！歡迎遊玩三GAY志";
+        reservationResult.className = "text-green-400 text-center mt-6";
+        reservationForm.reset();
+      }
+    });
+
+    redeemBtn.addEventListener('click', () => {
+      const enteredCode = stickerCodeInput.value.trim();
+      redeemResult.innerHTML = '<span class="spinner"></span>正在驗證中...';
+      redeemResult.className = "text-yellow-300 text-center mt-4";
+
+      setTimeout(() => {
+        if (correctStickerCode.includes(enteredCode)) {
+          redeemResult.textContent = "✅ 成功領取限定表情包！";
+          redeemResult.className = "text-green-400 text-center mt-4";
+          downloadBtn.classList.remove('hidden');
+          stickerCodeInput.value = "";
+        } else {
+          redeemResult.textContent = "❌ 兌換碼錯誤。";
+          redeemResult.className = "text-red-400 text-center mt-4";
+          downloadBtn.classList.add('hidden');
+        }
+      }, 2000);
+    });
+
+    function filterCodeInput() {
+      const start = stickerCodeInput.selectionStart;
+      const end = stickerCodeInput.selectionEnd;
+      stickerCodeInput.value = stickerCodeInput.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
+      stickerCodeInput.setSelectionRange(start, end);
+    }
+
+    stickerCodeInput.value = stickerCodeInput.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
+  </script>
+</body>
+</html>
