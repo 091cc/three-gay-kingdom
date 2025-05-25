@@ -2,18 +2,16 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>三GAY志遊戲預約</title>
   <meta name="google-site-verification" content="dD8BLSdmLGFWDNZ_lxgi28iqK6gn1OapISj1-YDAPO4" />
   <link rel="icon" href="https://github.com/091cc/three-gay-kingdom/blob/main/三GAY志.png?raw=true" type="image/x-icon" />
   <script src="https://cdn.tailwindcss.com"></script>
-
   <meta property="og:title" content="三GAY志遊戲預約" />
   <meta property="og:description" content="重返亂世，成就將軍霸業！" />
   <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/e/e3/China_old_map.jpg" />
   <meta property="og:url" content="https://091cc.github.io/three-gay-kingdom/" />
   <meta property="og:type" content="website" />
-
   <style>
     .spinner {
       display: inline-block;
@@ -26,84 +24,73 @@
       margin-right: 8px;
       vertical-align: middle;
     }
-
     @keyframes spin {
       to {
         transform: rotate(360deg);
       }
     }
+    .text-xxs {
+      font-size: 0.625rem;
+      line-height: 1;
+    }
   </style>
-  <style>
-  .text-xxs {
-    font-size: 0.625rem;
-    line-height: 1;
-  }
-</style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
-  <section class="text-center py-20 bg-center" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/China_old_map.jpg'); background-size: contain; background-repeat: no-repeat; background-position: center;">
-    <div class="bg-black bg-opacity-50 p-10">
-      <h1 class="text-5xl font-bold mb-4">三GAY志：將軍</h1>
-      <p class="text-xl mb-6">重返亂世，成就將軍霸業！</p>
-
-      <button id="showEmailForm" class="bg-yellow-500 hover:bg-yellow-600 text-black px-14 py-8 rounded-full font-semibold w-full mb-4">
+  <section class="text-center py-16 px-4 bg-center bg-no-repeat bg-contain" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/China_old_map.jpg');">
+    <div class="bg-black bg-opacity-60 p-6 md:p-10 rounded-xl max-w-2xl mx-auto">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4">三GAY志：將軍</h1>
+      <p class="text-lg md:text-xl mb-6">重返亂世，成就將軍霸業！</p>
+      <button id="showEmailForm" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-4 rounded-full font-semibold w-full mb-4 text-lg">
         立即預約
       </button>
-
-      <button type="button" id="redeemButton2" class="bg-green-500 hover:bg-green-600 text-black font-semibold py-3 rounded w-1/2 mx-auto mt-4 block">
-        立即兌換限定表情包 (限定表情包製作中...)
+      <button type="button" id="redeemButton2" class="bg-green-500 hover:bg-green-600 text-black font-semibold py-3 px-4 rounded w-full md:w-1/2 mx-auto block">
+        立即兌換限定表情包 (製作中...)
       </button>
     </div>
   </section>
 
-  <section class="py-16 bg-gray-900 px-6">
-    <h2 class="text-3xl text-center font-bold mb-10">英雄人物介紹</h2>
+  <section class="py-12 px-4">
+    <h2 class="text-2xl md:text-3xl text-center font-bold mb-10">英雄人物介紹</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="bg-gray-800 p-6 rounded-xl text-center flex flex-col">
         <h3 class="text-xl font-semibold mb-2">楊老</h3>
-        <img src="https://i.imgur.com/AZK5a66.png" alt="楊老" class="mx-auto object-contain mb-4 rounded-lg opacity-20" style="height: 390px;">
+        <img src="https://i.imgur.com/AZK5a66.png" alt="楊老" class="mx-auto object-contain mb-4 rounded-lg opacity-20 max-h-80">
         <p class="text-sm mb-3">錯！你錯了！咱們新疆的房子不輸台北...</p>
         <ul class="text-sm text-left list-disc list-inside space-y-1">
-          <li>
-            根據地:
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/60px-Flag_of_the_Republic_of_China.svg.png" class="h-4 inline-block mx-1" alt="旗幟" />
-            中華民國新疆省
-          </li>
+          <li>根據地：<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/60px-Flag_of_the_Republic_of_China.svg.png" class="h-4 inline-block mx-1" alt="旗幟" /> 中華民國新疆省</li>
           <li>技能：大力敲桌子使湯匙飛起，造成威懾。</li>
         </ul>
       </div>
       <div class="bg-gray-800 p-6 rounded-xl text-center flex flex-col">
         <h3 class="text-xl font-semibold mb-2">郭將軍</h3>
-        <img src="https://i.imgur.com/J5oxe31.jpg" alt="郭將軍" class="mx-auto max-h-96 object-contain mb-4 rounded-lg opacity-10">
+        <img src="https://i.imgur.com/J5oxe31.jpg" alt="郭將軍" class="mx-auto object-contain mb-4 rounded-lg opacity-10 max-h-80">
         <p class="text-sm mb-3">如果我在古代，我一定是個將軍...</p>
         <ul class="text-sm text-left list-disc list-inside space-y-1 mb-auto">
-          <li>
-            根據地:
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/60px-Flag_of_the_Republic_of_China.svg.png" class="h-4 inline-block mx-1" alt="旗幟" />
-            中華民國臺灣省
-          </li>
+          <li>根據地：<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/60px-Flag_of_the_Republic_of_China.svg.png" class="h-4 inline-block mx-1" alt="旗幟" /> 中華民國臺灣省</li>
           <li>技能：大聲尖叫。</li>
         </ul>
       </div>
-      <div class="bg-gray-800 p-6 rounded-xl text-center">
-        <img src="https" alt="未知" class="mx-auto w-40 h-40 object-cover rounded-full mb-4">
+      <div class="bg-gray-800 p-6 rounded-xl text-center flex flex-col items-center justify-center">
+        <img src="https" alt="未知" class="w-32 h-32 object-cover rounded-full mb-4">
         <h3 class="text-xl font-semibold">(預計版本1.4.0更新)</h3>
         <p class="text-sm">未知</p>
       </div>
     </div>
   </section>
-<div style="display:flex; justify-content:center; align-items:center; height:200px; background:#111;">
-  <pre class="mx-auto max-w-full text-yellow-400 font-mono text-xs bg-gray-900 p-2 rounded-lg whitespace-pre-wrap break-words" style="margin:0;">
-   _______  _    _  _____  ______  ______     ____    _   __   __    _  __  _____  _   _   ____   _____    ____   __  __ 
-  |__   __|| |  | ||  __ \|  ____||  ____|   / ___|  / \  \ \ / /   | |/ / |_   _|| \ | | / ___| |  __ \  / __ \ |  \/  |
-     | |   | |__| || |__)|| |__   | |__     | |  _  / _ \  \ V /    | ' /    | |  |  \| || |  _  | |  | || |  | || \  / |
-     | |   |  __  ||  _  /|  __|  |  __|    | |_| |/ ___ \  | |     |  <     | |  | . ` || | | | | |  | || |  | || |\/| |
-     | |   | |  | || | \ \| |____ | |____    \____/_/   \_\ |_|     | . \   _| |_ | |\  || |_| | | |__| || |__| || |  | |
-     |_|   |_|  |_||_|  \_\______||______|                          |_|\_\ |_____||_| \_| \____| |_____/  \____/ |_|  |_|
-  </pre>
-</div>
+
+  <div class="flex justify-center items-center h-52 bg-black">
+    <pre class="text-yellow-400 font-mono text-xs bg-gray-900 p-2 rounded-lg whitespace-pre-wrap break-words max-w-full overflow-x-auto">
+ _______  _    _  _____  ______  ______     ____    _   __   __    _  __  _____  _   _   ____   _____    ____   __  __
+|__   __|| |  | ||  __ \|  ____||  ____|   / ___|  / \  \ \ / /   | |/ / |_   _|| \ | | / ___| |  __ \  / __ \ |  \/  |
+   | |   | |__| || |__)|| |__   | |__     | |  _  / _ \  \ V /    | ' /    | |  |  \| || |  _  | |  | || |  | || \  / |
+   | |   |  __  ||  _  /|  __|  |  __|    | |_| |/ ___ \  | |     |  <     | |  | . ` || | | | | |  | || |  | || |\/| |
+   | |   | |  | || | \ \| |____ | |____    \____/_/   \_\ |_|     | . \   _| |_ | |\  || |_| | | |__| || |__| || |  | |
+   |_|   |_|  |_||_|  \_\______||______|                          |_|\_\ |_____||_| \_| \____| |_____/  \____/ |_|  |_|
+    </pre>
+  </div>
+
   <section id="reserve" class="py-16 bg-gray-800 px-6 hidden">
-    <h2 class="text-3xl text-center font-bold mb-10">立即預約</h2>
+    <h2 class="text-2xl md:text-3xl text-center font-bold mb-10">立即預約</h2>
     <form id="reservationForm" class="max-w-xl mx-auto bg-gray-700 p-8 rounded-lg space-y-6">
       <div>
         <label class="block mb-2">電子郵件</label>
@@ -117,30 +104,16 @@
   </section>
 
   <section id="redeemSection" class="py-16 px-6 hidden scroll-mt-20">
-    <h2 class="text-3xl text-center font-bold mb-6">限定表情包兌換</h2>
+    <h2 class="text-2xl md:text-3xl text-center font-bold mb-6">限定表情包兌換</h2>
     <div class="max-w-md mx-auto bg-gray-700 p-8 rounded-lg space-y-4">
       <label class="block text-lg mb-2 font-medium" for="stickerCode">輸入兌換碼</label>
-      <input
-        maxlength="9"
-        type="text"
-        id="stickerCode"
-        autocomplete="off"
-        inputmode="text"
-        class="w-full px-4 py-3 rounded bg-gray-600 text-white"
-        placeholder="輸入兌換碼"
-        oninput="filterCodeInput()"
-      />
+      <input maxlength="9" type="text" id="stickerCode" autocomplete="off" inputmode="text" class="w-full px-4 py-3 rounded bg-gray-600 text-white" placeholder="輸入兌換碼" oninput="filterCodeInput()" />
       <button id="redeemButton" class="w-full bg-green-500 hover:bg-green-600 text-black font-semibold py-3 rounded">
         立即兌換
       </button>
       <div id="redeemResult" class="text-center mt-4"></div>
       <div class="flex justify-center">
-        <a
-          id="downloadStickerBtn"
-          href="https://example.com/sticker-pack.zip"
-          download
-          class="hidden mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-        >
+        <a id="downloadStickerBtn" href="https://example.com/sticker-pack.zip" download class="hidden mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
           下載表情包
         </a>
       </div>
