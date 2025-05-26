@@ -13,29 +13,48 @@
   <meta property="og:url" content="https://091cc.github.io/three-gay-kingdom/" />
   <meta property="og:type" content="website" />
   <style>
-    .spinner {
-      display: inline-block;
-      width: 1rem;
-      height: 1rem;
-      border: 2px solid transparent;
-      border-top-color: white;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin-right: 8px;
-      vertical-align: middle;
+  .spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid transparent;
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
     }
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-    .text-xxs {
-      font-size: 0.625rem;
-      line-height: 1;
-    }
-  </style>
+  }
+  .text-xxs {
+    font-size: 0.625rem;
+    line-height: 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
+  <header class="bg-gray-900 text-white shadow-md fixed top-0 w-full z-50">
+  <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-4">
+    <a href="#" class="flex items-center space-x-3 mb-2 md:mb-0 hover:opacity-90 transition">
+      <img src="https://github.com/091cc/three-gay-kingdom/blob/main/三GAY志.png?raw=true" alt="三GAY志 Logo" class="w-10 h-10 rounded" />
+      <span class="text-lg md:text-xl font-bold">三GAY志遊戲預約</span>
+    </a>
+    <nav class="flex flex-wrap justify-center md:justify-end gap-4 text-sm">
+      <a href="#reserve" class="hover:text-yellow-400 transition">事實查核中心 (NCC)</a>
+      <a href="#redeemSection" class="hover:text-yellow-400 transition">楊語錄</a>
+      <a href="https://www.youtube.com/watch?v=MYFNh3N8Bjw" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition">學數學</a>
+      <a href="#footer" class="hover:text-yellow-400 transition">聯絡資訊</a>
+    </nav>
+  </div>
+</header>
+  <section class="mt-24 text-center py-16 px-4 ..."></section>
   <section class="text-center py-16 px-4 bg-center bg-no-repeat bg-contain" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/China_old_map.jpg');">
     <div class="bg-black bg-opacity-60 p-6 md:p-10 rounded-xl max-w-2xl mx-auto">
       <h1 class="text-3xl md:text-5xl font-bold mb-4">三GAY志：將軍</h1>
@@ -44,7 +63,7 @@
         立即預約
       </button>
       <button type="button" id="redeemButton2" class="bg-green-500 hover:bg-green-600 text-black font-semibold py-3 px-4 rounded w-full md:w-1/2 mx-auto block">
-        立即兌換限定表情包 (製作中...)
+        立即兌換限定表情包 (計畫製作)
       </button>
     </div>
   </section>
@@ -72,7 +91,7 @@
       </div>
       <div class="bg-gray-800 p-6 rounded-xl text-center flex flex-col items-center justify-center">
         <img src="https" alt="未知" class="w-32 h-32 object-cover rounded-full mb-4">
-        <h3 class="text-xl font-semibold">(預計版本1.4.0更新)</h3>
+        <h3 class="text-xl font-semibold">(暫不更新)</h3>
         <p class="text-sm">未知</p>
       </div>
     </div>
@@ -127,13 +146,14 @@
        |_|   |_|  |_||_|  \_\______||______|                          |_|\_\ |_____||_| \_| \____| |_____/  \____/ |_|  |_|
       </pre>
     </div>
-      <p class="text-sm mt-4 text-gray-500">網頁版本:1.2.2</p>
-      <div class="mt-6 text-sm text-gray-400 text-center max-w-xl mx-auto">
+      <p class="text-sm mt-4 text-gray-500">網頁版本:1.2.4</p>
+      <div id="footer" class="mt-6 text-sm text-gray-400 text-center max-w-xl mx-auto">
         本網站為<strong class="text-white">非營利、個人遊戲模擬展示用途</strong>，不會蒐集任何使用者資料，也不含任何下載連結（除非經使用者手動點擊）。所有內容皆為虛構，僅供娛樂。
       </div>
       <div class="mt-4 text-left max-w-xl mx-auto text-sm text-gray-400">
   <h3 class="font-bold text-white mb-2">更新紀錄：</h3>
   <ul class="list-disc list-inside space-y-1">
+    <li>v1.2.2 - 增加了列表，也順便學了三角形全等性質。</li>
     <li>v1.2.2 - 增加了裝飾，也順便抓了幾隻臭蟲。</li>
     <li>v1.2.1 - 解決部份照片爭議，也順便抓了幾隻臭蟲。</li>
     <li>v1.2.0 - 增加官方instagram帳號，並喝了一些可樂。</li>
