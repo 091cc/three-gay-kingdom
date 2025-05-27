@@ -37,6 +37,12 @@
   html {
     scroll-behavior: smooth;
   }
+  .flash-border {
+    border: 2px solid #facc15;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    transition: border 0.3s ease-in-out;
+  }
 </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
@@ -129,12 +135,14 @@
   </section>
 
   <footer class="bg-gray-900 text-center py-6">
-    <p id="contact" class="mb-4 scroll-mt-24">聯絡和追蹤我們：</p>
-    <div class="flex justify-center space-x-6">
-      <a href="https://091cc.github.io/three-gay-kingdom/" class="hover:text-yellow-400">Website</a>
-      <a href="https://github.com/091cc" class="hover:text-yellow-400">Github</a>
-      <a href="https://www.instagram.com/three_gay_kingdomoffical?igsh=MTVxM2l4eGV1djl5bg%3D%3D" class="hover:text-yellow-400">Instagram</a>
-    </div>
+    <div id="contact" class="scroll-mt-24 mb-6">
+  <p class="mb-4">聯絡和追蹤我們：</p>
+  <div class="flex justify-center space-x-6">
+    <a href="https://091cc.github.io/three-gay-kingdom/" class="hover:text-yellow-400">Website</a>
+    <a href="https://github.com/091cc" class="hover:text-yellow-400">Github</a>
+    <a href="https://www.instagram.com/three_gay_kingdomoffical?igsh=MTVxM2l4eGV1djl5bg%3D%3D" class="hover:text-yellow-400">Instagram</a>
+  </div>
+</div>
     <p class="text-sm mt-4 text-gray-500">© 2025 三GAY志遊戲開發團隊 (STR network Present)</p>
     <div class="w-full overflow-x-auto bg-sky-500/10 py-6 px-2">
       <pre class="text-yellow-400 font-mono text-[9px] sm:text-xs bg-gray-900 p-4 rounded-lg whitespace-pre min-w-[600px] inline-block">
@@ -245,7 +253,17 @@
     }
 
     stickerCodeInput.value = stickerCodeInput.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
-    
+  const contactLink = document.querySelector('a[href="#contact"]');
+  const contactTarget = document.getElementById('contact');
+
+  contactLink.addEventListener('click', () => {
+    setTimeout(() => {
+      contactTarget.classList.add('flash-border');
+      setTimeout(() => {
+        contactTarget.classList.remove('flash-border');
+      }, 1000);
+    }, 400);
+  });
   </script>
 </body>
 </html>
