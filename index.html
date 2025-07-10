@@ -284,7 +284,8 @@
           const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
           if (!emailValid) {
             reservationResult.textContent = "❌ 請輸入有效的電子郵件地址。";
-            reservationResult.className = "text-red-400 text-center mt-6";
+            reservationResult.className = "text-red-400 text-center mt-6 shake";
+            setTimeout(() => reservationResult.classList.remove("shake"), 400);
           } else {
             reservationResult.textContent = "✅ 預約成功！歡迎遊玩三GAY志";
             reservationResult.className = "text-green-400 text-center mt-6";
@@ -295,7 +296,7 @@
 
       if (redeemBtn) {
         redeemBtn.addEventListener("click", () => {
-          const enteredCode = stickerCodeInput.value.trim();
+          const enteredCode = stickerCodeInput.value.trim().toUpperCase(); // 強制大寫處理
           redeemResult.innerHTML = '<span class="spinner"></span>正在驗證中...';
           redeemResult.className = "text-yellow-300 text-center mt-4";
 
@@ -307,8 +308,9 @@
               stickerCodeInput.value = "";
             } else {
               redeemResult.textContent = "❌ 兌換碼錯誤。";
-              redeemResult.className = "text-red-400 text-center mt-4";
+              redeemResult.className = "text-red-400 text-center mt-4 shake";
               downloadBtn.classList.add("hidden");
+              setTimeout(() => redeemResult.classList.remove("shake"), 400);
             }
           }, 1200);
         });
@@ -323,6 +325,7 @@
             .replace(/[^A-Z0-9]/g, "");
           stickerCodeInput.setSelectionRange(start, end);
         }
+        stickerCodeInput.addEventListener("input", filterCodeInput);
 
         stickerCodeInput.value = stickerCodeInput.value
           .toUpperCase()
