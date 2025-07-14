@@ -1,242 +1,179 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>三GAY志遊戲預約</title>
-    <link
-      rel="icon"
-      href="https://github.com/091cc/three-gay-kingdom/blob/main/%E4%B8%89GAY%E5%BF%97.png?raw=true"
-      type="image/x-icon"
-    />
-    <meta name="theme-color" content="#000000" />
-    <meta name="google-site-verification" content="dD8BLSdmLGFWDNZ_lxgi28iqK6gn1OapISj1-YDAPO4" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <meta property="og:title" content="三GAY志遊戲預約" />
-    <meta property="og:description" content="重返亂世，成就將軍霸業！" />
-    <meta
-      property="og:image"
-      content="https://github.com/091cc/three-gay-kingdom/blob/main/%E4%B8%89GAY%E5%BF%97.png?raw=true"
-    />
-    <meta property="og:url" content="https://091cc.github.io/three-gay-kingdom/" />
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      .flash-border {
-        border: 2px solid #facc15;
-        border-radius: 0.5rem;
-        padding: 0.5rem;
-        transition: border 0.3s ease-in-out;
-      }
-      body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    color: #111;
-    background-color: #fff;
-    line-height: 1.5;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>三GAY志遊戲預約</title>
+  <meta name="google-site-verification" content="dD8BLSdmLGFWDNZ_lxgi28iqK6gn1OapISj1-YDAPO4" />
+  <link rel="icon" href="https://github.com/091cc/three-gay-kingdom/blob/main/三GAY志.png?raw=true" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta property="og:title" content="三GAY志遊戲預約" />
+  <meta property="og:description" content="重返亂世，成就將軍霸業！" />
+  <meta property="og:image" content="https://github.com/091cc/three-gay-kingdom/blob/main/三GAY志.png?raw=true" />
+  <meta property="og:url" content="https://091cc.github.io/three-gay-kingdom/" />
+  <meta property="og:type" content="website" />
+  <style>
+  .spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid transparent;
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+    vertical-align: middle;
   }
-  h1, h2, h3 {
-    font-weight: 600;
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
   }
-    </style>
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    AOS.init({
-      duration: 800,
-      once: true,
-    });
-  });
-</script>
-  </head>
-  <body class="bg-white text-black font-sans antialiased">
-    <header class="bg-black text-white fixed top-0 w-full z-50">
-      <div
-        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
-      >
-        <a href="#" class="flex items-center space-x-3">
-          <img src="三GAY志.png" alt="Logo" class="w-8 h-8" />
-          <span class="text-xl font-semibold">三GAY志</span>
-        </a>
-        <nav class="flex space-x-6 text-sm">
-          <a href="fact-check.html" class="hover:text-gray-300">事實查核</a>
-          <a href="yang_quotes.html" class="hover:text-gray-300">楊語錄</a>
-          <a href="愛國公民簽署書.html" class="hover:text-gray-300">簽署書</a>
-          <a
-            href="https://www.youtube.com/watch?v=MYFNh3N8Bjw"
-            target="_blank"
-            class="hover:text-gray-300"
-            >學數學</a
-          >
-          <a href="#contact" class="hover:text-gray-300">聯絡</a>
-        </nav>
+  .text-xxs {
+    font-size: 0.625rem;
+    line-height: 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  .flash-border {
+    border: 2px solid #facc15;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    transition: border 0.3s ease-in-out;
+  }
+</style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <header class="bg-gray-900 text-white shadow-md fixed top-0 w-full z-50">
+  <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-4">
+    <a href="#" class="flex items-center space-x-3 mb-2 md:mb-0 hover:opacity-90 transition">
+      <img src="三GAY志.png" alt="三GAY志 Logo" class="w-10 h-10 rounded" />
+      <span class="text-lg md:text-xl font-bold">三GAY志遊戲預約</span>
+    </a>
+    <nav class="flex flex-wrap justify-center md:justify-end gap-4 text-sm">
+      <a href="fact-check.html" class="hover:text-yellow-400 transition">事實查核中心 (NCC)</a>
+      <a href="yang_quotes.html" class="hover:text-yellow-400 transition">楊語錄</a>
+      <a href="愛國公民簽署書.html" class="hover:text-yellow-400 transition">愛國公民簽署書</a>
+      <a href="https://www.youtube.com/watch?v=MYFNh3N8Bjw" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition">學數學</a>
+      <a href="#contact" class="hover:text-yellow-400 transition">聯絡資訊</a>
+    </nav>
+  </div>
+</header>
+  <section class="mt-24 text-center py-16 px-4 ..."></section>
+  <section class="text-center py-16 px-4 bg-center bg-no-repeat bg-contain" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/China_old_map.jpg');">
+    <div class="bg-black bg-opacity-60 p-6 md:p-10 rounded-xl max-w-2xl mx-auto">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4">三GAY志：將軍</h1>
+      <p class="text-lg md:text-xl mb-6">重返亂世，成就將軍霸業！</p>
+      <button id="showEmailForm" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-4 rounded-full font-semibold w-full mb-4 text-lg">
+        立即預約
+      </button>
+      <button type="button" id="redeemButton2" class="bg-green-500 hover:bg-green-600 text-black font-semibold py-3 px-4 rounded w-full md:w-1/2 mx-auto block">
+        立即兌換楊語錄
+      </button>
+    </div>
+  </section>
+
+  <section class="py-12 px-4">
+    <h2 class="text-2xl md:text-3xl text-center font-bold mb-10">英雄人物介紹</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-gray-800 p-6 rounded-xl text-center flex flex-col">
+        <h3 class="text-xl font-semibold mb-2">楊老</h3>
+        <img src="https://i.imgur.com/AZK5a66.png" alt="楊老" class="mx-auto object-contain mb-4 rounded-lg opacity-20 max-h-80"></img>
+        <p class="text-sm mb-3">錯！你錯了！咱們新疆的房子不輸台北...</p>
+        <ul class="text-sm text-left list-disc list-inside space-y-1">
+          <li>根據地：<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/60px-Flag_of_the_Republic_of_China.svg.png" class="h-4 inline-block mx-1" alt="旗幟" /> 中華民國新疆省</li>
+          <li>技能：大力敲桌子使湯匙飛起，造成威懾。</li>
+        </ul>
+        <img src="https://i.imgur.com/8ZLtYUx.png" class="h-40 mb-4 mt-5 mx-auto block" alt="Chinese Beijing"/>
+      <strong class="text-20 mb-10">中華北京</strong>
       </div>
-    </header>
+    </div>
+      <div class="bg-gray-800 p-6 rounded-xl text-center flex flex-col">
+        <h3 class="text-xl font-semibold mb-2">郭將軍</h3>
+        <img src="https://i.imgur.com/J5oxe31.jpg" alt="郭將軍" class="mx-auto object-contain mb-4 rounded-lg opacity-10 max-h-80">
+        <p class="text-sm mb-3">如果我在古代，我一定是個將軍...</p>
+        <ul class="text-sm text-left list-disc list-inside space-y-1 mb-auto">
+          <li>根據地：<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/60px-Flag_of_the_Republic_of_China.svg.png" class="h-4 inline-block mx-1" alt="旗幟" /> 中華民國臺灣省</li>
+          <li>技能：大聲尖叫。</li>
+        </ul>
+        <img 
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/2560px-Flag_of_the_Republic_of_China.svg.png" 
+        class="h-40 mb-4 mt-5 mx-auto block" 
+        alt="Republic of China"
+      />
+      <strong class="text-20 mb-10">中華民國</strong>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl text-center flex flex-col items-center justify-center">
+        <img src="https" alt="未知" class="w-32 h-32 object-cover rounded-full mb-4">
+        <h3 class="text-xl font-semibold">(暫不更新)</h3>
+      </div>
+    </div>
+  </section>
 
-    <main class="mt-24">
-      <section class="text-center py-32 bg-gray-100">
-        <div class="max-w-3xl mx-auto">
-          <h1 class="text-5xl md:text-6xl font-semibold" data-aos="fade-down">三GAY志：將軍</h1>
-          <p class="text-xl mt-6 text-gray-600" data-aos="fade-up" data-aos-delay="100">重返亂世，成就將軍霸業！</p>
-          <div class="mt-10 space-x-4">
-            <button
-              id="showEmailForm"
-              class="bg-black text-white px-6 py-3 rounded-full text-lg hover:bg-neutral-800"
-            >
-              立即預約
-            </button>
-            <button
-              id="redeemButton2"
-              class="bg-gray-300 text-black px-6 py-3 rounded-full text-lg hover:bg-gray-400"
-            >
-              領取楊語錄
-            </button>
-          </div>
+  <section id="reserve" class="py-16 bg-gray-800 px-6 hidden">
+    <h2 class="text-2xl md:text-3xl text-center font-bold mb-10">立即預約</h2>
+    <form id="reservationForm" class="max-w-xl mx-auto bg-gray-700 p-8 rounded-lg space-y-6">
+      <div>
+        <label class="block mb-2">電子郵件</label>
+        <input type="email" id="email" class="w-full px-4 py-3 rounded bg-gray-600 text-white" placeholder="請輸入您的 Email" required>
+      </div>
+      <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 rounded">
+        送出預約
+      </button>
+      <div id="reservationResult" class="text-center mt-4"></div>
+    </form>
+  </section>
+
+  <section id="redeemSection" class="py-16 px-6 hidden scroll-mt-20">
+    <h2 class="text-2xl md:text-3xl text-center font-bold mb-6">楊語錄兌換</h2>
+    <div class="max-w-md mx-auto bg-gray-700 p-8 rounded-lg space-y-4">
+      <label class="block text-lg mb-2 font-medium" for="stickerCode">輸入兌換碼</label>
+      <input maxlength="9" type="text" id="stickerCode" autocomplete="off" inputmode="text" class="w-full px-4 py-3 rounded bg-gray-600 text-white" placeholder="輸入兌換碼" oninput="filterCodeInput()" />
+      <button id="redeemButton" class="w-full bg-green-500 hover:bg-green-600 text-black font-semibold py-3 rounded">
+        立即兌換
+      </button>
+      <div id="redeemResult" class="text-center mt-4"></div>
+      <div class="flex justify-center">
+        <a id="downloadStickerBtn" href="https://github.com/091cc/three-gay-kingdom/raw/main/yang_quotes.pdf" download class="hidden mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+          下載楊語錄
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-center py-6">
+    <div id="contact" class="scroll-mt-24 mb-6">
+      <p class="mb-4">聯絡和追蹤我們：</p>
+        <div class="flex justify-center space-x-6">
+          <a href="https://091cc.github.io/three-gay-kingdom/" class="hover:text-yellow-400">Website</a>
+          <a href="https://github.com/091cc" class="hover:text-yellow-400">Github</a>
+          <a href="https://www.instagram.com/three_gay_kingdomoffical?igsh=MTVxM2l4eGV1djl5bg%3D%3D" class="hover:text-yellow-400">Instagram</a>
         </div>
-      </section>
-
-      <section class="py-20 bg-white">
-        <h2 class="text-center text-3xl font-bold mb-12">英雄人物介紹</h2>
-        <div
-          class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto px-6"
-        >
-          <div class="text-center" data-aos="fade-up">
-            <img
-              src="https://i.imgur.com/AZK5a66.png"
-              alt="楊老"
-              class="w-full object-cover rounded-xl mb-4"
-            />
-            <h3 class="text-xl font-semibold mb-2">楊老</h3>
-            <p class="text-sm text-gray-700 mb-2">
-              錯！你錯了！咱們新疆的房子不輸台北...
-            </p>
-            <ul
-              class="text-sm text-left list-disc list-inside text-gray-600"
-            >
-              <li>根據地：中華民國新疆省</li>
-              <li>技能：大力敲桌子使湯匙飛起，造成威懾。</li>
-            </ul>
-          </div>
-          <div class="text-center" data-aos="fade-up">
-            <img
-              src="https://i.imgur.com/J5oxe31.jpg"
-              alt="郭將軍"
-              class="w-full object-cover rounded-xl mb-4 opacity-10"
-            />
-            <h3 class="text-xl font-semibold mb-2">郭將軍</h3>
-            <p class="text-sm text-gray-700 mb-2">
-              如果我在古代，我一定是個將軍...
-            </p>
-            <ul
-              class="text-sm text-left list-disc list-inside text-gray-600"
-            >
-              <li>根據地：中華民國臺灣省</li>
-              <li>技能：大聲尖叫。</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section
-        id="reserve"
-        class="hidden py-16 bg-gray-50 max-w-lg mx-auto text-center"
-      >
-        <h2 class="text-2xl font-bold mb-4">遊戲預約</h2>
-        <form id="reservationForm" class="space-y-4">
-          <input
-            type="email"
-            id="email"
-            placeholder="輸入你的 Email"
-            class="w-full p-3 rounded border border-gray-300"
-            required
-          />
-          <button
-            type="submit"
-            class="bg-black text-white px-6 py-2 rounded hover:bg-neutral-800"
-          >
-            提交預約
-          </button>
-        </form>
-        <p id="reservationResult" class="mt-4"></p>
-      </section>
-      <section
-        id="redeemSection"
-        class="hidden py-16 bg-white max-w-lg mx-auto text-center"
-      >
-        <h2 class="text-2xl font-bold mb-4">領取楊語錄</h2>
-        <input
-          type="text"
-          id="stickerCode"
-          placeholder="輸入兌換碼"
-          class="w-full p-3 rounded border border-gray-300 text-center uppercase tracking-widest"
-        />
-        <button
-          id="redeemButton"
-          class="mt-4 bg-gray-800 text-white px-6 py-2 rounded hover:bg-gray-700"
-        >
-          確認兌換
-        </button>
-        <p id="redeemResult" class="mt-4"></p>
-        <a
-          id="downloadStickerBtn"
-          href="https://github.com/091cc/three-gay-kingdom/raw/main/yang_quotes.pdf"
-          target="_blank"
-          class="hidden mt-6 inline-block bg-green-600 text-white px-5 py-2 rounded hover:bg-green-500"
-          >前往領取</a
-        >
-      </section>
-
-      <section id="contact" class="py-20 bg-black text-white">
-        <div class="max-w-2xl mx-auto text-center">
-          <h2 class="text-3xl font-bold mb-4">聯絡與追蹤</h2>
-          <p class="mb-6">追蹤我們以獲取最新消息：</p>
-          <div class="flex justify-center space-x-6">
-            <a href="https://091cc.github.io/three-gay-kingdom/" class="hover:underline"
-              >Website</a
-            >
-            <a href="https://github.com/091cc" class="hover:underline">Github</a>
-            <a
-              href="https://www.instagram.com/three_gay_kingdomoffical?igsh=MTVxM2l4eGV1djl5bg%3D%3D"
-              class="hover:underline"
-              >Instagram</a
-            >
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer
-      class="bg-neutral-900 text-gray-400 py-10 text-center text-sm"
-    >
-      <p class="mb-2">© 2025 三GAY志遊戲開發團隊</p>
-      <p class="mb-2">本網站為非營利個人展示，所有內容皆為虛構，僅供娛樂</p>
-      <strong class="text-white"
-        >遊戲背景，皆非虛構。如有雷同，那就雷同。</strong
-      >
-      <p>版本 v1.2.9.1 | 最後更新時間：2025/07/10</p>
-      <div
-        class="w-full overflow-x-auto py-6 px-2"
-      >
-        <pre
-          class="text-yellow-400 font-mono text-[9px] sm:text-xs p-4 rounded-lg whitespace-pre min-w-[600px] inline-block"
-        >
+    </div>
+    <p class="text-sm mt-4 text-gray-500">© 2025 三GAY志遊戲開發團隊 (STR network Present)</p>
+    <div class="w-full overflow-x-auto bg-sky-500/10 py-6 px-2">
+      <pre class="text-yellow-400 font-mono text-[9px] sm:text-xs bg-gray-900 p-4 rounded-lg whitespace-pre min-w-[600px] inline-block">
     _______  _    _  _____  ______  ______     ____    _   __   __    _  __  _____  _   _   ____   _____    ____   __  __
     |__   __|| |  | ||  __ \|  ____||  ____|   / ___|  / \  \ \ / /   | |/ / |_   _|| \ | | / ___| |  __ \  / __ \ |  \/  |
        | |   | |__| || |__)|| |__   | |__     | |  _  / _ \  \ V /    | ' /    | |  |  \| || |  _  | |  | || |  | || \  / |
        | |   |  __  ||  _  /|  __|  |  __|    | |_| |/ ___ \  | |     |  <     | |  | . ` || | | | | |  | || |  | || |\/| |
        | |   | |  | || | \ \| |____ | |____    \____/_/   \_\ |_|     | . \   _| |_ | |\  || |_| | | |__| || |__| || |  | |
        |_|   |_|  |_||_|  \_\______||______|                          |_|\_\ |_____||_| \_| \____| |_____/  \____/ |_|  |_|
-        </pre>
-      </div>
-      <div
-        class="mt-4 text-left max-w-xl mx-auto text-sm text-gray-400"
-      >
+      </pre>
+    </div>
+    <div class="mt-6 text-sm text-gray-400 text-center max-w-xl mx-auto">
+        本網站為<strong class="text-white">非營利、個人遊戲模擬展示用途</strong>，不會蒐集任何使用者資料，也不含任何下載連結（除非經使用者手動點擊）。所有內容皆為虛構，僅供娛樂。
+    </div>
+      <strong class="text-white">遊戲背景，皆非虛構。如有雷同，那就雷同。</strong>
+      <p class="text-sm mt-4 text-gray-500">網頁版本:1.2.9.1</p>
+      <p class="text-sm mt-4 text-gray-500">最後更新時間：2025/07/10 22:51:34</p>
+      <div class="mt-4 text-left max-w-xl mx-auto text-sm text-gray-400">
         <h3 class="font-bold text-white mb-2">更新紀錄：</h3>
         <ul class="list-disc list-inside space-y-1">
           <li>v1.2.9.1 - 學了箏形和鳶形的差異，也順便抓了幾隻臭蟲。</li>
-          <li>
-            v1.2.9 - 增加楊語錄、事實查核中心、角色陣營，並看了一顆粽子。
-          </li>
+          <li>v1.2.9 - 增加楊語錄、事實查核中心、角色陣營，並看了一顆粽子。</li>
           <li>v1.2.4 - 增加了列表，也順便學了三角形全等性質。</li>
           <li>v1.2.2 - 增加了裝飾，也順便抓了幾隻臭蟲。</li>
           <li>v1.2.1 - 解決部份照片爭議，也順便抓了幾隻臭蟲。</li>
@@ -252,105 +189,93 @@
           <li>v1.1.0 - 項目初版上線</li>
         </ul>
       </div>
-    </footer>
+  <div class="fixed bottom-4 right-4 flex flex-col items-end space-y-2 z-50">
+    <a href="https://www.instagram.com/three_gay_kingdomoffical?igsh=MTVxM2l4eGV1djl5bg%3D%3D"
+      target="_blank"
+      class="bg-pink-500 hover:bg-pink-600 text-white font-bold px-4 py-2 rounded-full shadow-lg flex items-center space-x-2">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="w-5 h-5" />
+      <span>IG</span>
+    </a>
+  </div>
+</footer>
 
-    <script>
-      const showEmailFormButton = document.getElementById("showEmailForm");
-      const reserveSection = document.getElementById("reserve");
-      const reservationForm = document.getElementById("reservationForm");
-      const reservationResult = document.getElementById("reservationResult");
-      const redeemSection = document.getElementById("redeemSection");
-      const redeemBtn = document.getElementById("redeemButton");
-      const redeemBtn2 = document.getElementById("redeemButton2");
-      const stickerCodeInput = document.getElementById("stickerCode");
-      const redeemResult = document.getElementById("redeemResult");
-      const correctStickerCode = ["GAYGAY666", "GAYGAY024"];
-      const downloadBtn = document.getElementById("downloadStickerBtn");
+<script>
+  const showEmailFormButton = document.getElementById('showEmailForm');
+  const reserveSection = document.getElementById('reserve');
+  const reservationForm = document.getElementById('reservationForm');
+  const reservationResult = document.getElementById('reservationResult');
+  const redeemSection = document.getElementById('redeemSection');
+  const redeemBtn = document.getElementById('redeemButton');
+  const redeemBtn2 = document.getElementById('redeemButton2');
+  const stickerCodeInput = document.getElementById('stickerCode');
+  const redeemResult = document.getElementById('redeemResult');
+  const correctStickerCode = ["GAYGAY666", "GAYGAY024", "64TANK114"];
+  const downloadBtn = document.getElementById('downloadStickerBtn');
 
-      if (showEmailFormButton) {
-        showEmailFormButton.addEventListener("click", function () {
-          reserveSection.classList.remove("hidden");
-          reserveSection.scrollIntoView({ behavior: "smooth" });
-        });
+  showEmailFormButton.addEventListener('click', function () {
+    reserveSection.classList.remove('hidden');
+    reserveSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  redeemBtn2.addEventListener('click', () => {
+    redeemSection.classList.remove('hidden');
+    redeemSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  reservationForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const email = document.getElementById('email').value.trim();
+    downloadBtn.classList.add('hidden');
+
+    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!emailValid) {
+      reservationResult.textContent = "❌ 請輸入有效的電子郵件地址。";
+      reservationResult.className = "text-red-400 text-center mt-6";
+    } else {
+      reservationResult.textContent = "✅ 預約成功！歡迎遊玩三GAY志";
+      reservationResult.className = "text-green-400 text-center mt-6";
+      reservationForm.reset();
+    }
+  });
+
+  redeemBtn.addEventListener('click', () => {
+    const enteredCode = stickerCodeInput.value.trim();
+    redeemResult.innerHTML = '<span class="spinner"></span>正在驗證中...';
+    redeemResult.className = "text-yellow-300 text-center mt-4";
+
+    setTimeout(() => {
+      if (correctStickerCode.includes(enteredCode)) {
+        redeemResult.textContent = "✅ 成功領取楊語錄！";
+        redeemResult.className = "text-green-400 text-center mt-4";
+        downloadBtn.classList.remove('hidden');
+        stickerCodeInput.value = "";
+      } else {
+        redeemResult.textContent = "❌ 兌換碼錯誤。";
+        redeemResult.className = "text-red-400 text-center mt-4";
+        downloadBtn.classList.add('hidden');
       }
+    }, 1200);
+  });
 
-      if (redeemBtn2) {
-        redeemBtn2.addEventListener("click", () => {
-          redeemSection.classList.remove("hidden");
-          redeemSection.scrollIntoView({ behavior: "smooth" });
-        });
-      }
+  function filterCodeInput() {
+    const start = stickerCodeInput.selectionStart;
+    const end = stickerCodeInput.selectionEnd;
+    stickerCodeInput.value = stickerCodeInput.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
+    stickerCodeInput.setSelectionRange(start, end);
+  }
 
-      if (reservationForm) {
-        reservationForm.addEventListener("submit", function (e) {
-          e.preventDefault();
-          const email = document.getElementById("email").value.trim();
-          downloadBtn.classList.add("hidden");
+  stickerCodeInput.value = stickerCodeInput.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
+  const contactLink = document.querySelector('a[href="#contact"]');
+  const contactTarget = document.getElementById('contact');
 
-          const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-          if (!emailValid) {
-            reservationResult.textContent = "❌ 請輸入有效的電子郵件地址。";
-            reservationResult.className = "text-red-400 text-center mt-6 shake";
-            setTimeout(() => reservationResult.classList.remove("shake"), 400);
-          } else {
-            reservationResult.textContent = "✅ 預約成功！歡迎遊玩三GAY志";
-            reservationResult.className = "text-green-400 text-center mt-6";
-            reservationForm.reset();
-          }
-        });
-      }
-
-      if (redeemBtn) {
-        redeemBtn.addEventListener("click", () => {
-          const enteredCode = stickerCodeInput.value.trim().toUpperCase(); // 強制大寫處理
-          redeemResult.innerHTML = '<span class="spinner"></span>正在驗證中...';
-          redeemResult.className = "text-yellow-300 text-center mt-4";
-
-          setTimeout(() => {
-            if (correctStickerCode.includes(enteredCode)) {
-              redeemResult.textContent = "✅ 成功領取楊語錄！";
-              redeemResult.className = "text-green-400 text-center mt-4";
-              downloadBtn.classList.remove("hidden");
-              stickerCodeInput.value = "";
-            } else {
-              redeemResult.textContent = "❌ 兌換碼錯誤。";
-              redeemResult.className = "text-red-400 text-center mt-4 shake";
-              downloadBtn.classList.add("hidden");
-              setTimeout(() => redeemResult.classList.remove("shake"), 400);
-            }
-          }, 1200);
-        });
-      }
-
-      if (stickerCodeInput) {
-        function filterCodeInput() {
-          const start = stickerCodeInput.selectionStart;
-          const end = stickerCodeInput.selectionEnd;
-          stickerCodeInput.value = stickerCodeInput.value
-            .toUpperCase()
-            .replace(/[^A-Z0-9]/g, "");
-          stickerCodeInput.setSelectionRange(start, end);
-        }
-        stickerCodeInput.addEventListener("input", filterCodeInput);
-
-        stickerCodeInput.value = stickerCodeInput.value
-          .toUpperCase()
-          .replace(/[^A-Z0-9]/g, "");
-      }
-
-      const contactLink = document.querySelector('a[href="#contact"]');
-      const contactTarget = document.getElementById("contact");
-
-      if (contactLink && contactTarget) {
-        contactLink.addEventListener("click", () => {
-          setTimeout(() => {
-            contactTarget.classList.add("flash-border");
-            setTimeout(() => {
-              contactTarget.classList.remove("flash-border");
-            }, 1000);
-          }, 400);
-        });
-      }
-    </script>
-  </body>
+  contactLink.addEventListener('click', () => {
+    setTimeout(() => {
+      contactTarget.classList.add('flash-border');
+      setTimeout(() => {
+        contactTarget.classList.remove('flash-border');
+      }, 1000);
+    }, 400);
+  });
+  </script>
+</body>
 </html>
