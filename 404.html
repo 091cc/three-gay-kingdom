@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Error_404</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="https://github.com/091cc/three-gay-kingdom/blob/main/三GAY志.png?raw=true" />
+  <link rel="icon" href="https://github.com/091cc/three-gay-kingdom/blob/main/三GAY志.png?raw=true" type="image/x-icon" />
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Bangers');
+
+    * {
+      position: relative;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100vw;
+      overflow-x: hidden;
+      overflow-y: auto;
+      background-color: #111827;
+    }
+
+    .container {
+      height: 100vh;
+    }
+
+    .block {
+      position: absolute;
+      left: 55%;
+      transform: translate(-50%, 0);
+      height: 80px;
+      width: 80px;
+      background-image: url('https://pa1.narvii.com/6489/524d20cabd4731dffd6453fb707ab1d2b2b11c52_00.gif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+
+    .mario {
+      position: absolute;
+      width: 78px;
+      height: 68px;
+      background-image: url('https://i.imgur.com/yG0LizU.png');
+      background-position-y: -191px;
+      background-position-x: -22px;
+      transition: bottom .3s linear;
+    }
+
+    .number {
+      position: absolute;
+      left: 55%;
+      transform: translate(-50%, 1px);
+      height: 80px;
+      width: 80px;
+      text-align: center;
+      font-size: 70px;
+      text-shadow:
+        -3px -3px 0 #000,
+         3px -3px 0 #000,
+        -3px  3px 0 #000,
+         3px  3px 0 #000;
+      font-family: 'Bangers', cursive;
+      animation: moveUp 1.5s linear;
+    }
+
+    @keyframes moveUp {
+      from { transform: translate(-50%, 1px); }
+      to { transform: translate(-50%, -150px); }
+    }
+
+    .hit {
+      animation: blockHit .2s linear;
+    }
+
+    @keyframes blockHit {
+      0%   { transform: translate(-50%, 0); }
+      50%  { transform: translate(-50%, -20px); }
+      100% { transform: translate(-50%, 0); }  
+    }
+
+    @keyframes fade-in {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.8s ease-out forwards;
+    }
+
+    .flash-border {
+      border: 2px solid #facc15;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      transition: border 0.3s ease-in-out;
+    }
+
+    .container {
+      min-height: 100vh;
+      padding-top: 80px;
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-gray-900 text-white shadow-md fixed top-0 w-full z-50">
+  <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-4">
+    <a href="#" class="flex items-center space-x-3 mb-2 md:mb-0 hover:opacity-90 transition">
+      <img src="三GAY志.png" alt="三GAY志 Logo" class="w-10 h-10 rounded" />
+      <span class="text-lg md:text-xl font-bold">三GAY志遊戲預約</span>
+    </a>
+    <nav class="flex flex-wrap justify-center md:justify-end gap-4 text-sm">
+      <a href="fact-check.html" class="hover:text-yellow-400 transition">事實查核中心 (NCC)</a>
+      <a href="yang_quotes.html" class="hover:text-yellow-400 transition">楊語錄</a>
+      <a href="愛國公民簽署書.html" class="hover:text-yellow-400 transition">愛國公民簽署書</a>
+      <a href="https://www.youtube.com/watch?v=MYFNh3N8Bjw" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition">學數學</a>
+      <a href="#contact" class="hover:text-yellow-400 transition">聯絡資訊</a>
+    </nav>
+  </div>
+</header>
+
+    
+    <div class="container" id="container">
+    <div class="block" id="block"></div>
+    <div class="mario" id="mario"></div>
+    </div>
+    <div class="flex justify-center w-full -mt-20">
+      <strong class="text-5xl text-white">ERROR_404     <a href="index.html" class="text-yellow-400 hover:underline text-4xl">回首頁  →</a></strong>
+    </div>
+
+
+   <footer class="bg-gray-900 mt-4 text-center py-6">
+    <div id="contact-box" class="scroll-mt-24 mb-6">
+  <p class="mb-4 text-white">聯絡和追蹤我們：</p></div>
+  <div class="flex justify-center space-x-6 text-white">
+    <a href="https://091cc.github.io/three-gay-kingdom/" class="hover:text-yellow-400">Website</a>
+    <a href="https://github.com/091cc" class="hover:text-yellow-400">Github</a>
+    <a href="https://www.instagram.com/three_gay_kingdomoffical?igsh=MTVxM2l4eGV1djl5bg%3D%3D" class="hover:text-yellow-400">Instagram</a>
+  </div>
+</div>
+    <p class="text-sm mt-4 text-gray-500">© 2025 三GAY志遊戲開發團隊 (STR network Present)</p>
+    <div class="w-full overflow-x-auto bg-sky-500/10 py-6 px-2">
+      <pre class="text-yellow-400 font-mono text-[9px] sm:text-xs bg-gray-900 p-4 rounded-lg whitespace-pre min-w-[600px] inline-block">
+    _______  _    _  _____  ______  ______     ____    _   __   __    _  __  _____  _   _   ____   _____    ____   __  __
+    |__   __|| |  | ||  __ \|  ____||  ____|   / ___|  / \  \ \ / /   | |/ / |_   _|| \ | | / ___| |  __ \  / __ \ |  \/  |
+       | |   | |__| || |__)|| |__   | |__     | |  _  / _ \  \ V /    | ' /    | |  |  \| || |  _  | |  | || |  | || \  / |
+       | |   |  __  ||  _  /|  __|  |  __|    | |_| |/ ___ \  | |     |  <     | |  | . ` || | | | | |  | || |  | || |\/| |
+       | |   | |  | || | \ \| |____ | |____    \____/_/   \_\ |_|     | . \   _| |_ | |\  || |_| | | |__| || |__| || |  | |
+       |_|   |_|  |_||_|  \_\______||______|                          |_|\_\ |_____||_| \_| \____| |_____/  \____/ |_|  |_|
+      </pre>
+    </div>
+    <div class="mt-6 text-sm text-gray-400 text-center max-w-xl mx-auto">
+        本網站為<strong class="text-white">非營利、個人遊戲模擬展示用途</strong>，不會蒐集任何使用者資料，也不含任何下載連結（除非經使用者手動點擊）。所有內容皆為虛構，僅供娛樂。
+      </div>
+<div class="fixed bottom-4 right-4 flex flex-col items-end space-y-2 z-50">
+<a href="https://www.instagram.com/three_gay_kingdomoffical?igsh=MTVxM2l4eGV1djl5bg%3D%3D"
+  target="_blank"
+  class="bg-pink-500 hover:bg-pink-600 text-white font-bold px-4 py-2 rounded-full shadow-lg flex items-center space-x-2">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="w-5 h-5" />
+  <span>IG</span>
+</a>
+</div>
+  </footer>
+
+  <script>
+    const blocks     = [4, 0, 4];
+    const colors     = ['red', 'green', 'blue', 'yellow'];
+    const mario      = document.querySelector("#mario");
+    const block      = document.querySelector("#block");
+    const container  = document.querySelector("#container");
+    const marioSpeed = 5;
+    const moveTime   = 10;
+
+    let blockOn           = 0;
+    let moveMarioInterval = null;
+    let stepsTaken        = 0;
+    const marioPositions = [-22, -219, -414];
+    let bgPositionOn = 0;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      resetMario();
+    });
+
+    function resetMario() {
+      const blockPos = document.body.clientHeight * 0.35;
+      mario.style.bottom = '150px';
+      mario.style.left = '100px';
+      block.style.top = '200px';
+      blockOn = 0;
+      resetInterval();
+      setupInitialMovement();
+    }
+
+    function setupInitialMovement() {
+      moveMarioInterval = setInterval(() => {
+        moveMario();
+        if (checkMarioUnderBlock()) {
+          setupJump();
+        }
+      }, moveTime);
+    }
+
+    function moveMario() {
+      let currentPos = parseInt(mario.style.left, 10);
+      mario.style.left = (currentPos + marioSpeed) + 'px';
+
+      if (stepsTaken >= 5) {
+        mario.style.backgroundPositionX = marioPositions[bgPositionOn] + 'px';
+        bgPositionOn = 1 - bgPositionOn;
+        stepsTaken = 0;
+      } else {
+        stepsTaken++; 
+      }
+    }
+
+    function resetInterval() {
+      clearInterval(moveMarioInterval);
+      moveMarioInterval = null;
+    }
+
+    function checkMarioUnderBlock() {
+      const blockPos = block.getBoundingClientRect();
+      const marioPos = mario.getBoundingClientRect();
+      return blockPos.left < marioPos.left && blockPos.right > marioPos.left;
+    }
+
+function setupJump() {
+  resetInterval();
+  bgPositionOn = 1;
+  mario.style.backgroundPositionX = marioPositions[bgPositionOn] + 'px';
+
+  moveMarioInterval = setInterval(() => {
+    if (blockOn >= blocks.length) {
+      resetInterval();
+      continueMoving();
+    } else {
+      jump();
+      blockOn++;
+    }
+  }, 2000);
+}
+
+    function jump() {
+      const jumpHeight = parseInt(block.clientHeight, 10) + parseInt(block.style.top, 10);
+      const bodyHeight = document.body.clientHeight;
+      const marioHeight = parseInt(mario.clientHeight, 10);
+      const currentBottom = parseInt(mario.style.bottom || '150', 10);
+      mario.style.bottom = (currentBottom + 340) + 'px';
+      mario.style.backgroundPositionX = marioPositions[2] + 'px';
+
+      setTimeout(() => { 
+        hitBlock();
+      }, 300);
+
+      setTimeout(() => {
+        mario.style.backgroundPositionX = marioPositions[bgPositionOn] + 'px';
+      }, 600);
+    }
+
+    function hitBlock() {
+      block.classList.add('hit');
+      setTimeout(() => {
+        block.classList.remove('hit');    
+      }, 200);
+
+      mario.style.bottom = '150px';   
+
+      let newNumber = document.createElement('div');
+      newNumber.innerHTML = blocks[blockOn - 1];
+      newNumber.style.top = block.style.top;
+      newNumber.style.color = getRandomColor();
+      newNumber.classList.add('number');
+      container.appendChild(newNumber);
+
+      setTimeout(() => {
+        container.removeChild(newNumber);
+      }, 1500);
+    }
+
+    function getRandomColor() {
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    function continueMoving() {
+      resetInterval();
+      moveMarioInterval = setInterval(() => {
+        moveMario();
+        if (checkIfOffScreen()) {
+          resetMario();
+        }
+      }, moveTime);
+    }
+
+    function checkIfOffScreen() {
+      const marioLeft = parseInt(mario.style.left, 10);
+      return marioLeft > document.body.clientWidth;
+    }
+  </script>
+</body>
+</html>
