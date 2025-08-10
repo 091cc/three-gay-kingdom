@@ -288,7 +288,7 @@ function updateCountdown() {
   const diff = deadline - now;
 
   if (diff <= 0) {
-    countdownEl.textContent = "⏰ 投票已結束！";
+    countdownEl.textContent = "-投票已結束！-";
     countdownEl.classList.remove("text-yellow-300");
     countdownEl.classList.add("text-gray-400");
     return;
