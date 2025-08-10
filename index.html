@@ -56,6 +56,7 @@
       <a href="fact-check.html" class="hover:text-yellow-400 transition">事實查核中心 (NCC)</a>
       <a href="yang_quotes.html" class="hover:text-yellow-400 transition">楊語錄</a>
       <a href="愛國公民簽署書.html" class="hover:text-yellow-400 transition">愛國公民簽署書</a>
+      <a href="#voteEvent" class="hover:text-yellow-400 transition text-red-400 font-bold">🔥 8/23 投票 🔥</a>
       <a href="https://www.youtube.com/watch?v=MYFNh3N8Bjw" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition">學數學</a>
       <a href="#contact" class="hover:text-yellow-400 transition">聯絡資訊</a>
     </nav>
@@ -102,6 +103,15 @@
         <strong class="text-20 mb-10">中華民國</strong>
       </div>
     </div>
+  </section>
+
+  <section id="voteEvent" style="background-color: #87231D;" class="py-16 px-6 scroll-mt-20 text-white text-center">
+  <h2 class="text-3xl md:text-4xl font-bold mb-4">🔥 8/23 罷免投票 🔥</h2>
+  <p class="text-lg mb-6">是否不同意楊老不被罷免：</p>
+  <div id="countdown" class="text-4xl font-mono text-yellow-300 mb-8">載入中...</div>
+  <a href="vote.html" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full text-lg transition">
+    前往投票
+  </a>
   </section>
 
   <section id="reserve" class="py-16 bg-gray-800 px-6 hidden">
@@ -269,6 +279,33 @@
       }, 1000);
     }, 400);
   });
+
+  const countdownEl = document.getElementById("countdown");
+
+function updateCountdown() {
+  const deadline = new Date("2025-08-23T23:59:59").getTime();
+  const now = new Date().getTime();
+  const diff = deadline - now;
+
+  if (diff <= 0) {
+    countdownEl.textContent = "⏰ 投票已結束！";
+    countdownEl.classList.remove("text-yellow-300");
+    countdownEl.classList.add("text-gray-400");
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+
+  const pad = (n) => n.toString().padStart(2, '0');
+
+  countdownEl.textContent = `${pad(days)}天 ${pad(hours)}小時 ${pad(minutes)}分 ${pad(seconds)}秒`;
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
   </script>
 </body>
 </html>
