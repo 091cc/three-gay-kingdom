@@ -55,7 +55,6 @@
     <nav class="flex flex-wrap justify-center md:justify-end gap-4 text-sm">
       <a href="fact-check.html" class="hover:text-yellow-400 transition">事實查核中心 (NCC)</a>
       <a href="yang_quotes.html" class="hover:text-yellow-400 transition">楊語錄</a>
-      <a href="#voteEvent" class="hover:text-yellow-400 transition text-red-400 font-bold">🔥 8/23 投票 🔥</a>
       <a href="https://www.youtube.com/watch?v=MYFNh3N8Bjw" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition">學數學</a>
       <a href="#contact" class="hover:text-yellow-400 transition">聯絡資訊</a>
     </nav>
@@ -81,7 +80,7 @@
       <div class="bg-gray-800 p-6 rounded-xl text-center flex flex-col">
         <h3 class="text-xl font-semibold mb-2">楊老</h3>
         <img src="https://i.imgur.com/ahrNpkh.png" alt="楊老" class="mx-auto object-contain mb-4 rounded-lg max-h-80"></img>
-        <p class="text-sm mb-3">錯！你錯了！咱們新疆的房子不輸台北...</p>
+        <p class="text-sm mb-3">錯！你錯了！新疆的房子不輸台北...</p>
         <ul class="text-sm text-left list-disc list-inside space-y-1">
           <li>根據地：<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/60px-Flag_of_the_Republic_of_China.svg.png" class="h-4 inline-block mx-1" alt="旗幟" /> 中華民國新疆省</li>
           <li>技能：大力敲桌子使湯匙飛起，造成威懾。</li>
@@ -101,14 +100,11 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/2560px-Flag_of_the_Republic_of_China.svg.png" class="h-40 mb-4 mt-5 mx-auto block" alt="Republic of China"/>
         <strong class="text-20 mb-10">中華民國</strong>
       </div>
-    </div>
-  </section>
+      <div class="bg-gray-800 p-6 rounded-xl text-center flex flex-col">
 
-  <section id="voteEvent" style="background-color: #87231D;" class="py-16 px-6 scroll-mt-20 text-white text-center">
-  <h2 class="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center gap-2"><img src="https://i.imgur.com/JRLkM8g.png" alt="vote logo" class="h-10 md:h-12"/><span>8/23 罷免投票</span></h2>
-  <div id="countdown" class="text-4xl font-mono text-yellow-300 mb-8">載入中...</div>
-  <img src="https://i.imgur.com/GCJxsXX.png" alt="倒數下方圖片" class="mx-auto max-w-xs mb-6" />
-  <a href="vote.html" class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full text-lg transition"><img src="https://i.imgur.com/JRLkM8g.png" alt="vote logo" class="h-10 md:h-12" /><span>前往投票</span></a>
+        
+      </div>
+    </div>
   </section>
 
   <section id="reserve" class="py-16 bg-gray-800 px-6 hidden">
@@ -277,33 +273,6 @@
       }, 1000);
     }, 400);
   });
-
-  const countdownEl = document.getElementById("countdown");
-
-function updateCountdown() {
-  const deadline = new Date("2025-08-23T23:59:59").getTime();
-  const now = new Date().getTime();
-  const diff = deadline - now;
-
-  if (diff <= 0) {
-    countdownEl.textContent = "-投票已結束！-";
-    countdownEl.classList.remove("text-yellow-300");
-    countdownEl.classList.add("text-gray-400");
-    return;
-  }
-
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / (1000 * 60)) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
-
-  const pad = (n) => n.toString().padStart(2, '0');
-
-  countdownEl.textContent = `${pad(days)}天 ${pad(hours)}小時 ${pad(minutes)}分 ${pad(seconds)}秒`;
-}
-
-setInterval(updateCountdown, 1000);
-updateCountdown();
   </script>
 </body>
 </html>
