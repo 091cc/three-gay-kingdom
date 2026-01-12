@@ -22,24 +22,24 @@
       overflow-x: hidden;
       overflow-y: auto;
       background-color: #111827;
+      color: white;
     }
-    
+
     .container {
       min-height: 100vh;
       padding-top: 100px;
-      overflow: hidden;
     }
 
     .block {
       position: absolute;
-      left: 55%;
-      transform: translate(-50%, 0);
+      left: 50%;
+      top: 220px;
+      transform: translateX(-50%);
       height: 80px;
       width: 80px;
       background-image: url('https://pa1.narvii.com/6489/524d20cabd4731dffd6453fb707ab1d2b2b11c52_00.gif');
       background-size: cover;
       background-position: center;
-      background-repeat: no-repeat;
       z-index: 10;
     }
 
@@ -56,10 +56,8 @@
 
     .number {
       position: absolute;
-      left: 55%;
-      transform: translate(-50%, 1px);
-      height: 80px;
-      width: 80px;
+      left: 50%;
+      transform: translateX(-50%);
       text-align: center;
       font-size: 70px;
       text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
@@ -68,41 +66,35 @@
     }
 
     @keyframes moveUp {
-      from { transform: translate(-50%, 1px); opacity: 1; }
+      from { transform: translate(-50%, 0); opacity: 1; }
       to { transform: translate(-50%, -180px); opacity: 0; }
     }
 
     .hit { animation: blockHit .2s linear; }
     @keyframes blockHit {
-      0% { transform: translate(-50%, 0); }
+      0%, 100% { transform: translate(-50%, 0); }
       50% { transform: translate(-50%, -20px); }
-      100% { transform: translate(-50%, 0); }  
     }
 
-    .error-text {
-      text-shadow: 0 0 20px rgba(250, 204, 21, 0.4);
-    }
+    .error-text { text-shadow: 0 0 20px rgba(250, 204, 21, 0.4); }
   </style>
 </head>
-<body class="text-white">
+<body>
 
-  <header class="bg-gray-900/95 backdrop-blur-sm text-white shadow-md fixed top-0 w-full z-50 border-b border-gray-800">
+  <header class="bg-gray-900/95 backdrop-blur-sm shadow-md fixed top-0 w-full z-50 border-b border-gray-800">
     <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 py-4">
-      
       <a href="index.html" class="flex items-center space-x-3 mb-4 md:mb-0 hover:opacity-80 transition">
-        <img src="三GAY志.png" alt="三GAY志 Logo" class="w-10 h-10 rounded shadow-md" />
+        <img src="三GAY志.png" alt="Logo" class="w-10 h-10 rounded" />
         <span class="text-xl md:text-2xl font-bold tracking-tighter">三GAY志</span>
       </a>
 
       <nav class="flex flex-wrap items-center justify-center md:justify-end gap-6 text-sm font-medium">
-        <a href="yang_quotes.html" class="hover:text-yellow-400 transition-colors">楊語錄</a>
-        <a href="shopping.html" class="hover:text-yellow-400 transition-colors">周邊購物</a>
-        
-        <a href="https://elcan1989.github.io/Yang-Life/index.html" class="hover:scale-105 transition-transform flex items-center">
-          <img src="https://elcan1989.github.io/Yang-Life/images/photo.png" alt="機智楊老生活" class="w-20 h-10 rounded border border-gray-700 object-cover">
+        <a href="yang_quotes.html" class="hover:text-yellow-400 transition">楊語錄</a>
+        <a href="shopping.html" class="hover:text-yellow-400 transition">周邊購物</a>
+        <a href="https://elcan1989.github.io/Yang-Life/index.html" class="hover:scale-105 transition flex items-center">
+          <img src="https://elcan1989.github.io/Yang-Life/images/photo.png" alt="Life" class="w-20 h-10 rounded border border-gray-700 object-cover">
         </a>
-
-        <a href="#contact" class="hover:text-yellow-400 transition-colors">聯絡資訊</a>
+        <a href="#contact" class="hover:text-yellow-400 transition">聯絡資訊</a>
       </nav>
     </div>
   </header>
@@ -113,22 +105,20 @@
   </div>
 
   <div class="flex flex-col items-center justify-center w-full -mt-24 pb-20">
-    <h1 class="text-6xl md:text-8xl font-black error-text mb-4 italic">
-      ERROR_<span class="text-yellow-400">404</span>
-    </h1>
+    <h1 class="text-6xl md:text-8xl font-black error-text mb-4 italic">ERROR_<span class="text-yellow-400">404</span></h1>
     <a href="index.html" class="group flex items-center space-x-2 text-2xl text-gray-400 hover:text-white transition">
       <span>回首頁探險</span>
-      <span class="group-hover:translate-x-2 transition-transform">→</span>
+      <span class="group-hover:translate-x-2 transition">→</span>
     </a>
   </div>
 
   <footer class="bg-gray-900 border-t border-gray-800 mt-10 text-center py-10 px-4">
     <div id="contact" class="scroll-mt-32 mb-8">
       <p class="mb-6 text-lg font-semibold">聯絡和追蹤我們</p>
-      <div class="flex justify-center space-x-8">
-        <a href="https://091cc.github.io/three-gay-kingdom/" class="hover:text-yellow-400 transition-colors underline-offset-4 hover:underline">官網</a>
-        <a href="https://github.com/091cc" class="hover:text-yellow-400 transition-colors underline-offset-4 hover:underline">Github</a>
-        <a href="https://www.instagram.com/three_gay_kingdomoffical" class="hover:text-yellow-400 transition-colors underline-offset-4 hover:underline">Instagram</a>
+      <div class="flex justify-center space-x-8 text-gray-300">
+        <a href="https://091cc.github.io/three-gay-kingdom/" class="hover:text-yellow-400 transition">官網</a>
+        <a href="https://github.com/091cc" class="hover:text-yellow-400 transition">Github</a>
+        <a href="https://www.instagram.com/three_gay_kingdomoffical" class="hover:text-yellow-400 transition">Instagram</a>
       </div>
     </div>
 
@@ -144,13 +134,8 @@
     </div>
 
     <p class="text-sm text-gray-500">© 2025 三GAY志遊戲開發團隊 (STR network Present)</p>
-    <div class="mt-6 text-xs text-gray-600 max-w-xl mx-auto leading-relaxed">
-      本網站為<span class="text-gray-400">非營利個人展示用途</span>，所有內容皆為虛構，僅供娛樂。
-    </div>
-
     <div class="fixed bottom-6 right-6 z-50">
-      <a href="https://www.instagram.com/three_gay_kingdomoffical" target="_blank"
-         class="bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 hover:scale-110 text-white font-bold p-3 rounded-full shadow-2xl flex items-center transition-all">
+      <a href="https://www.instagram.com/three_gay_kingdomoffical" target="_blank" class="bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 p-3 rounded-full shadow-2xl flex items-center hover:scale-110 transition">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="IG" class="w-6 h-6" />
       </a>
     </div>
@@ -163,7 +148,6 @@
     const block = document.querySelector("#block");
     const container = document.querySelector("#container");
     const marioSpeed = 5;
-    const moveTime = 10;
 
     let blockOn = 0;
     let moveMarioInterval = null;
@@ -171,100 +155,85 @@
     const marioPositions = [-22, -219, -414];
     let bgPositionOn = 0;
 
-    document.addEventListener("DOMContentLoaded", () => {
-      resetMario();
-    });
+    document.addEventListener("DOMContentLoaded", resetMario);
 
     function resetMario() {
       mario.style.bottom = '150px';
-      mario.style.left = '-100px'; 
-      block.style.top = '200px';
+      mario.style.left = '-100px';
       blockOn = 0;
-      resetInterval();
-      setupInitialMovement();
-    }
-
-    function setupInitialMovement() {
-      moveMarioInterval = setInterval(() => {
-        moveMario();
-        if (checkMarioUnderBlock()) {
-          setupJump();
-        }
-      }, moveTime);
-    }
-
-    function moveMario() {
-      let currentPos = parseInt(mario.style.left, 10);
-      mario.style.left = (currentPos + marioSpeed) + 'px';
-
-      if (stepsTaken >= 5) {
-        mario.style.backgroundPositionX = marioPositions[bgPositionOn] + 'px';
-        bgPositionOn = 1 - bgPositionOn;
-        stepsTaken = 0;
-      } else {
-        stepsTaken++; 
-      }
-    }
-
-    function resetInterval() {
       clearInterval(moveMarioInterval);
-      moveMarioInterval = null;
+      startMoving();
+    }
+
+    function startMoving() {
+      moveMarioInterval = setInterval(() => {
+        let currentPos = parseInt(mario.style.left, 10);
+        mario.style.left = (currentPos + marioSpeed) + 'px';
+
+        if (stepsTaken >= 5) {
+          mario.style.backgroundPositionX = marioPositions[bgPositionOn] + 'px';
+          bgPositionOn = 1 - bgPositionOn;
+          stepsTaken = 0;
+        } else { stepsTaken++; }
+
+        if (checkMarioUnderBlock()) { triggerJumpSequence(); }
+      }, 10);
     }
 
     function checkMarioUnderBlock() {
-      const blockPos = block.getBoundingClientRect();
-      const marioPos = mario.getBoundingClientRect();
-      return marioPos.left + 40 > blockPos.left && marioPos.left < blockPos.left + 40;
+      const b = block.getBoundingClientRect();
+      const m = mario.getBoundingClientRect();
+      return Math.abs((m.left + m.width/2) - (b.left + b.width/2)) < 15;
     }
 
-    function setupJump() {
-      resetInterval();
-      bgPositionOn = 1;
-      mario.style.backgroundPositionX = marioPositions[bgPositionOn] + 'px';
+    function triggerJumpSequence() {
+      clearInterval(moveMarioInterval);
+      mario.style.backgroundPositionX = marioPositions[1] + 'px';
 
-      moveMarioInterval = setInterval(() => {
-        if (blockOn >= blocks.length) {
-          resetInterval();
-          continueMoving();
+      let jumpCount = 0;
+      const jumpInterval = setInterval(() => {
+        if (jumpCount >= blocks.length) {
+          clearInterval(jumpInterval);
+          resumeMoving();
         } else {
-          jump();
-          blockOn++;
+          executeJump();
+          jumpCount++;
         }
-      }, 1200); 
+      }, 1200);
     }
 
-    function jump() {
-      const currentBottom = parseInt(mario.style.bottom || '150', 10);
-      mario.style.bottom = (currentBottom + 340) + 'px';
+    function executeJump() {
+      mario.style.bottom = '490px';
       mario.style.backgroundPositionX = marioPositions[2] + 'px';
 
-      setTimeout(() => { hitBlock(); }, 300);
-      setTimeout(() => { mario.style.bottom = '150px'; }, 450);
-      setTimeout(() => { mario.style.backgroundPositionX = marioPositions[bgPositionOn] + 'px'; }, 600);
+      setTimeout(() => {
+        block.classList.add('hit');
+        createNumber(blocks[blockOn++]);
+        setTimeout(() => block.classList.remove('hit'), 200);
+      }, 300);
+
+      setTimeout(() => {
+        mario.style.bottom = '150px';
+        mario.style.backgroundPositionX = marioPositions[bgPositionOn] + 'px';
+      }, 450);
     }
 
-    function hitBlock() {
-      block.classList.add('hit');
-      setTimeout(() => { block.classList.remove('hit'); }, 200);
-
-      let newNumber = document.createElement('div');
-      newNumber.innerHTML = blocks[blockOn - 1];
-      newNumber.style.top = block.style.top;
-      newNumber.style.color = colors[Math.floor(Math.random() * colors.length)];
-      newNumber.classList.add('number');
-      container.appendChild(newNumber);
-
-      setTimeout(() => { if(newNumber.parentNode) container.removeChild(newNumber); }, 1500);
+    function createNumber(val) {
+      const n = document.createElement('div');
+      n.innerHTML = val;
+      n.style.top = '220px';
+      n.style.color = colors[Math.floor(Math.random() * colors.length)];
+      n.classList.add('number');
+      container.appendChild(n);
+      setTimeout(() => n.remove(), 1500);
     }
 
-    function continueMoving() {
-      resetInterval();
+    function resumeMoving() {
       moveMarioInterval = setInterval(() => {
-        moveMario();
-        if (parseInt(mario.style.left) > window.innerWidth + 100) {
-          resetMario();
-        }
-      }, moveTime);
+        let currentPos = parseInt(mario.style.left, 10);
+        mario.style.left = (currentPos + marioSpeed) + 'px';
+        if (currentPos > window.innerWidth + 100) resetMario();
+      }, 10);
     }
   </script>
 </body>
