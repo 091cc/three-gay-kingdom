@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>Error_404</title>
+  <title>Error_404 - 三GAY志</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:image" content="https://github.com/091cc/three-gay-kingdom/blob/main/三GAY志.png?raw=true" />
@@ -18,14 +18,16 @@
     }
 
     body {
-      width: 100vw;
+      width: 100%;
       overflow-x: hidden;
       overflow-y: auto;
       background-color: #111827;
     }
-
+    
     .container {
-      height: 100vh;
+      min-height: 100vh;
+      padding-top: 100px;
+      overflow: hidden;
     }
 
     .block {
@@ -38,7 +40,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      z-index: 1;
+      z-index: 10;
     }
 
     .mario {
@@ -49,6 +51,7 @@
       background-position-y: -191px;
       background-position-x: -22px;
       transition: bottom .3s linear;
+      z-index: 5;
     }
 
     .number {
@@ -59,121 +62,112 @@
       width: 80px;
       text-align: center;
       font-size: 70px;
-      text-shadow:
-        -3px -3px 0 #000,
-         3px -3px 0 #000,
-        -3px  3px 0 #000,
-         3px  3px 0 #000;
+      text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
       font-family: 'Bangers', cursive;
-      animation: moveUp 1.5s linear;
+      animation: moveUp 1.5s linear forwards;
     }
 
     @keyframes moveUp {
-      from { transform: translate(-50%, 1px); }
-      to { transform: translate(-50%, -150px); }
+      from { transform: translate(-50%, 1px); opacity: 1; }
+      to { transform: translate(-50%, -180px); opacity: 0; }
     }
 
-    .hit {
-      animation: blockHit .2s linear;
-    }
-
+    .hit { animation: blockHit .2s linear; }
     @keyframes blockHit {
-      0%   { transform: translate(-50%, 0); }
-      50%  { transform: translate(-50%, -20px); }
+      0% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, -20px); }
       100% { transform: translate(-50%, 0); }  
     }
 
-    @keyframes fade-in {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    .animate-fade-in {
-      animation: fade-in 0.8s ease-out forwards;
-    }
-
-    .flash-border {
-      border: 2px solid #facc15;
-      border-radius: 0.5rem;
-      padding: 0.5rem;
-      transition: border 0.3s ease-in-out;
-    }
-
-    .container {
-      min-height: 100vh;
-      padding-top: 80px;
+    .error-text {
+      text-shadow: 0 0 20px rgba(250, 204, 21, 0.4);
     }
   </style>
 </head>
-<body>
-  <header class="bg-gray-900 text-white shadow-md fixed top-0 w-full z-50">
-  <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-4">
-    <a href="index.html" class="flex items-center space-x-3 mb-2 md:mb-0 hover:opacity-90 transition">
-      <img src="三GAY志.png" alt="三GAY志 Logo" class="w-10 h-10 rounded" />
-      <span class="text-lg md:text-xl font-bold">三GAY志</span>
-    </a>
-    <nav class="flex flex-wrap justify-center md:justify-end gap-4 text-sm">
-      <a href="yang_quotes.html" class="hover:text-yellow-400 transition">楊語錄</a>
-      <a href="shopping.html" class="hover:text-yellow-400 transition">周邊購物</a>
-      <a href="#contact" class="hover:text-yellow-400 transition">聯絡資訊</a>
-    </nav>
-  </div>
-</header>
+<body class="text-white">
 
-    
-    <div class="container" id="container">
+  <header class="bg-gray-900/95 backdrop-blur-sm text-white shadow-md fixed top-0 w-full z-50 border-b border-gray-800">
+    <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 py-4">
+      
+      <a href="index.html" class="flex items-center space-x-3 mb-4 md:mb-0 hover:opacity-80 transition">
+        <img src="三GAY志.png" alt="三GAY志 Logo" class="w-10 h-10 rounded shadow-md" />
+        <span class="text-xl md:text-2xl font-bold tracking-tighter">三GAY志</span>
+      </a>
+
+      <nav class="flex flex-wrap items-center justify-center md:justify-end gap-6 text-sm font-medium">
+        <a href="yang_quotes.html" class="hover:text-yellow-400 transition-colors">楊語錄</a>
+        <a href="shopping.html" class="hover:text-yellow-400 transition-colors">周邊購物</a>
+        
+        <a href="https://elcan1989.github.io/Yang-Life/index.html" class="hover:scale-105 transition-transform flex items-center">
+          <img src="https://elcan1989.github.io/Yang-Life/images/photo.png" alt="機智楊老生活" class="w-20 h-10 rounded border border-gray-700 object-cover">
+        </a>
+
+        <a href="#contact" class="hover:text-yellow-400 transition-colors">聯絡資訊</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container" id="container">
     <div class="block" id="block"></div>
     <div class="mario" id="mario"></div>
-    </div>
-    <div class="flex justify-center w-full -mt-20">
-      <strong class="text-5xl text-white">ERROR_404     <a href="index.html" class="text-yellow-400 hover:underline text-4xl">回首頁  →</a></strong>
-    </div>
-
-
-   <footer class="bg-gray-900 mt-4 text-center py-6">
-    <div id="contact-box" class="scroll-mt-24 mb-6">
-  <p class="mb-4 text-white">聯絡和追蹤我們：</p></div>
-  <div class="flex justify-center space-x-6 text-white">
-    <a href="https://091cc.github.io/three-gay-kingdom/" class="hover:text-yellow-400">Website</a>
-    <a href="https://github.com/091cc" class="hover:text-yellow-400">Github</a>
-    <a href="https://www.instagram.com/three_gay_kingdomoffical?igsh=MTVxM2l4eGV1djl5bg%3D%3D" class="hover:text-yellow-400">Instagram</a>
   </div>
-</div>
-    <p class="text-sm mt-4 text-gray-500">© 2025 三GAY志遊戲開發團隊 (STR network Present)</p>
-    <div class="w-full overflow-x-auto bg-sky-500/10 py-6 px-2">
-      <pre class="text-yellow-400 font-mono text-[9px] sm:text-xs bg-gray-900 p-4 rounded-lg whitespace-pre min-w-[600px] inline-block">
-    _______  _    _  _____  ______  ______     ____    _   __   __    _  __  _____  _   _   ____   _____    ____   __  __
-    |__   __|| |  | ||  __ \|  ____||  ____|   / ___|  / \  \ \ / /   | |/ / |_   _|| \ | | / ___| |  __ \  / __ \ |  \/  |
-       | |   | |__| || |__)|| |__   | |__     | |  _  / _ \  \ V /    | ' /    | |  |  \| || |  _  | |  | || |  | || \  / |
-       | |   |  __  ||  _  /|  __|  |  __|    | |_| |/ ___ \  | |     |  <     | |  | . ` || | | | | |  | || |  | || |\/| |
-       | |   | |  | || | \ \| |____ | |____    \____/_/   \_\ |_|     | . \   _| |_ | |\  || |_| | | |__| || |__| || |  | |
-       |_|   |_|  |_||_|  \_\______||______|                          |_|\_\ |_____||_| \_| \____| |_____/  \____/ |_|  |_|
+
+  <div class="flex flex-col items-center justify-center w-full -mt-24 pb-20">
+    <h1 class="text-6xl md:text-8xl font-black error-text mb-4 italic">
+      ERROR_<span class="text-yellow-400">404</span>
+    </h1>
+    <a href="index.html" class="group flex items-center space-x-2 text-2xl text-gray-400 hover:text-white transition">
+      <span>回首頁探險</span>
+      <span class="group-hover:translate-x-2 transition-transform">→</span>
+    </a>
+  </div>
+
+  <footer class="bg-gray-900 border-t border-gray-800 mt-10 text-center py-10 px-4">
+    <div id="contact" class="scroll-mt-32 mb-8">
+      <p class="mb-6 text-lg font-semibold">聯絡和追蹤我們</p>
+      <div class="flex justify-center space-x-8">
+        <a href="https://091cc.github.io/three-gay-kingdom/" class="hover:text-yellow-400 transition-colors underline-offset-4 hover:underline">官網</a>
+        <a href="https://github.com/091cc" class="hover:text-yellow-400 transition-colors underline-offset-4 hover:underline">Github</a>
+        <a href="https://www.instagram.com/three_gay_kingdomoffical" class="hover:text-yellow-400 transition-colors underline-offset-4 hover:underline">Instagram</a>
+      </div>
+    </div>
+
+    <div class="w-full overflow-x-auto bg-black/30 py-8 px-4 rounded-xl max-w-4xl mx-auto my-8">
+      <pre class="text-yellow-500/80 font-mono text-[8px] sm:text-xs leading-tight">
+ _______  _    _  _____  ______  ______     ____    _   __   __    _  __  _____  _   _  ____  _____    ____  __  __
+ |__   __|| |  | ||  __ \|  ____||  ____|   / ___|  / \  \ \ / /   | |/ / |_   _|| \ | | / ___| |  __ \  / __ \ |  \/  |
+    | |   | |__| || |__)|| |__   | |__     | |  _  / _ \  \ V /    | ' /    | |  |  \| || |  _  | |  | || |  | || \  / |
+    | |   |  __  ||  _  /|  __|  |  __|    | |_| |/ ___ \  | |     |  <     | |  | . ` || | | | | |  | || |  | || |\/| |
+    | |   | |  | || | \ \| |____ | |____    \____/_/   \_\ |_|     | . \   _| |_ | |\  || |_| | | |__| || |__| || |  | |
+    |_|   |_|  |_||_|  \_\______||______|                          |_|\_\ |_____||_| \_| \____| |_____/  \____/ |_|  |_|
       </pre>
     </div>
-    <div class="mt-6 text-sm text-gray-400 text-center max-w-xl mx-auto">
-        本網站為<strong class="text-white">非營利、個人遊戲模擬展示用途</strong>，不會蒐集任何使用者資料，也不含任何下載連結（除非經使用者手動點擊）。所有內容皆為虛構，僅供娛樂。
-      </div>
-<div class="fixed bottom-4 right-4 flex flex-col items-end space-y-2 z-50">
-<a href="https://www.instagram.com/three_gay_kingdomoffical?igsh=MTVxM2l4eGV1djl5bg%3D%3D"
-  target="_blank"
-  class="bg-pink-500 hover:bg-pink-600 text-white font-bold px-4 py-2 rounded-full shadow-lg flex items-center space-x-2">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="w-5 h-5" />
-  <span>IG</span>
-</a>
-</div>
+
+    <p class="text-sm text-gray-500">© 2025 三GAY志遊戲開發團隊 (STR network Present)</p>
+    <div class="mt-6 text-xs text-gray-600 max-w-xl mx-auto leading-relaxed">
+      本網站為<span class="text-gray-400">非營利個人展示用途</span>，所有內容皆為虛構，僅供娛樂。
+    </div>
+
+    <div class="fixed bottom-6 right-6 z-50">
+      <a href="https://www.instagram.com/three_gay_kingdomoffical" target="_blank"
+         class="bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 hover:scale-110 text-white font-bold p-3 rounded-full shadow-2xl flex items-center transition-all">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="IG" class="w-6 h-6" />
+      </a>
+    </div>
   </footer>
 
   <script>
-    const blocks     = [4, 0, 4];
-    const colors     = ['red', 'green', 'blue', 'yellow'];
-    const mario      = document.querySelector("#mario");
-    const block      = document.querySelector("#block");
-    const container  = document.querySelector("#container");
+    const blocks = [4, 0, 4];
+    const colors = ['#f87171', '#4ade80', '#60a5fa', '#facc15'];
+    const mario = document.querySelector("#mario");
+    const block = document.querySelector("#block");
+    const container = document.querySelector("#container");
     const marioSpeed = 5;
-    const moveTime   = 10;
+    const moveTime = 10;
 
-    let blockOn           = 0;
+    let blockOn = 0;
     let moveMarioInterval = null;
-    let stepsTaken        = 0;
+    let stepsTaken = 0;
     const marioPositions = [-22, -219, -414];
     let bgPositionOn = 0;
 
@@ -182,9 +176,8 @@
     });
 
     function resetMario() {
-      const blockPos = document.body.clientHeight * 0.35;
       mario.style.bottom = '150px';
-      mario.style.left = '100px';
+      mario.style.left = '-100px'; 
       block.style.top = '200px';
       blockOn = 0;
       resetInterval();
@@ -221,79 +214,57 @@
     function checkMarioUnderBlock() {
       const blockPos = block.getBoundingClientRect();
       const marioPos = mario.getBoundingClientRect();
-      return blockPos.left < marioPos.left && blockPos.right > marioPos.left;
+      return marioPos.left + 40 > blockPos.left && marioPos.left < blockPos.left + 40;
     }
 
-function setupJump() {
-  resetInterval();
-  bgPositionOn = 1;
-  mario.style.backgroundPositionX = marioPositions[bgPositionOn] + 'px';
-
-  moveMarioInterval = setInterval(() => {
-    if (blockOn >= blocks.length) {
+    function setupJump() {
       resetInterval();
-      continueMoving();
-    } else {
-      jump();
-      blockOn++;
+      bgPositionOn = 1;
+      mario.style.backgroundPositionX = marioPositions[bgPositionOn] + 'px';
+
+      moveMarioInterval = setInterval(() => {
+        if (blockOn >= blocks.length) {
+          resetInterval();
+          continueMoving();
+        } else {
+          jump();
+          blockOn++;
+        }
+      }, 1200); 
     }
-  }, 2000);
-}
 
     function jump() {
-      const jumpHeight = parseInt(block.clientHeight, 10) + parseInt(block.style.top, 10);
-      const bodyHeight = document.body.clientHeight;
-      const marioHeight = parseInt(mario.clientHeight, 10);
       const currentBottom = parseInt(mario.style.bottom || '150', 10);
       mario.style.bottom = (currentBottom + 340) + 'px';
       mario.style.backgroundPositionX = marioPositions[2] + 'px';
 
-      setTimeout(() => { 
-        hitBlock();
-      }, 300);
-
-      setTimeout(() => {
-        mario.style.backgroundPositionX = marioPositions[bgPositionOn] + 'px';
-      }, 600);
+      setTimeout(() => { hitBlock(); }, 300);
+      setTimeout(() => { mario.style.bottom = '150px'; }, 450);
+      setTimeout(() => { mario.style.backgroundPositionX = marioPositions[bgPositionOn] + 'px'; }, 600);
     }
 
     function hitBlock() {
       block.classList.add('hit');
-      setTimeout(() => {
-        block.classList.remove('hit');    
-      }, 200);
-
-      mario.style.bottom = '150px';   
+      setTimeout(() => { block.classList.remove('hit'); }, 200);
 
       let newNumber = document.createElement('div');
       newNumber.innerHTML = blocks[blockOn - 1];
       newNumber.style.top = block.style.top;
-      newNumber.style.color = getRandomColor();
+      newNumber.style.color = colors[Math.floor(Math.random() * colors.length)];
       newNumber.classList.add('number');
       container.appendChild(newNumber);
 
-      setTimeout(() => {
-        container.removeChild(newNumber);
-      }, 1500);
-    }
-
-    function getRandomColor() {
-      return colors[Math.floor(Math.random() * colors.length)];
+      setTimeout(() => { if(newNumber.parentNode) container.removeChild(newNumber); }, 1500);
     }
 
     function continueMoving() {
       resetInterval();
       moveMarioInterval = setInterval(() => {
         moveMario();
-        if (checkIfOffScreen()) {
+        if (parseInt(mario.style.left) > window.innerWidth + 100) {
           resetMario();
         }
       }, moveTime);
-    }
-
-    function checkIfOffScreen() {
-      const marioLeft = parseInt(mario.style.left, 10);
-      return marioLeft > document.body.clientWidth;
     }
   </script>
 </body>
