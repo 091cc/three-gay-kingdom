@@ -12,7 +12,6 @@
     
     .container { min-height: 100vh; padding-top: 100px; }
 
-    /* 方塊樣式：建議將您的磚塊圖上傳至 GitHub 或穩定空間並替換 URL */
     .block {
       position: absolute;
       left: 50%;
@@ -20,9 +19,9 @@
       transform: translateX(-50%);
       height: 80px;
       width: 80px;
-      background-image: url('https://raw.githubusercontent.com/091cc/three-gay-kingdom/main/JPEG影像.jpeg'); /* 建議替換為您的穩定連結 */
+      background-image: url('https://raw.githubusercontent.com/091cc/three-gay-kingdom/main/JPEG影像.jpeg'); 
       background-size: cover;
-      background-color: #8b4513; /* 圖片失效時的備用色 */
+      background-color: #8b4513;
       z-index: 10;
     }
 
@@ -149,7 +148,7 @@
       const jumpInterval = setInterval(() => {
         if (jumpCount >= blocksData.length) {
           clearInterval(jumpInterval);
-          startMoving(); // 落地後繼續走
+          startMoving();
         } else {
           executeJump();
           jumpCount++;
