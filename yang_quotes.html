@@ -16,10 +16,12 @@
       <img src="三GAY志.png" alt="三GAY志 Logo" class="w-10 h-10 rounded" />
       <span class="text-lg md:text-xl font-bold">三GAY志</span>
     </a>
-    <nav class="flex flex-wrap justify-center md:justify-end gap-4 text-sm">
+    <nav class="flex flex-wrap items-center justify-center md:justify-end gap-4 text-sm">
       <a href="yang_quotes.html" class="hover:text-yellow-400 transition">楊語錄</a>
       <a href="shopping.html" class="hover:text-yellow-400 transition">周邊購物</a>
-      <a href="#contact" class="hover:text-yellow-400 transition">聯絡資訊</a>
+      <a href="https://elcan1989.github.io/Yang-Life/index.html" class="hover:text-yellow-400 transition"><img src="https://elcan1989.github.io/Yang-Life/images/photo.png" alt="機智楊老生活" class="w-20 h-10 rounded"></a>
+      <a href="apple_daily.html" class="hover:text-yellow-400 transition"><img src="蘋果日報.jpg" alt="蘋果日報logo" class="w-20 h-10 rounded"></a>
+      <a href="#contact" class="hover:text-yellow-400 transition">聯絡我們</a>
     </nav>
   </div>
   <style>
@@ -32,9 +34,8 @@
   </style>
 </head>
 <body class="bg-gray-900 text-white font-sans p-6">
-  <a href="index.html" class="text-yellow-400 hover:underline">← 回首頁</a>
   <section class="py-12 px-6">
-    <h2 class="text-2xl font-bold mb-4 text-center">楊主席語錄</h2>
+    <h1 class="text-2xl font-bold mb-4 text-center">楊主席語錄</h1>
     <iframe
       src="https://docs.google.com/viewer?url=https://github.com/091cc/three-gay-kingdom/raw/main/yang_quotes.pdf&embedded=true"
       width="100%"
@@ -53,7 +54,7 @@
     <a href="https://www.instagram.com/three_gay_kingdomoffical?igsh=MTVxM2l4eGV1djl5bg%3D%3D" class="hover:text-yellow-400">Instagram</a>
   </div>
 </div>
-    <p class="text-sm mt-4 text-gray-500">© 2025 三GAY志遊戲開發團隊 (STR network Present)</p>
+    <p class="text-sm mt-4 text-gray-500">© 2026 三GAY志遊戲開發團隊 (STR network Present)</p>
     <div class="w-full overflow-x-auto bg-sky-500/10 py-6 px-2">
       <pre class="text-yellow-400 font-mono text-[9px] sm:text-xs bg-gray-900 p-4 rounded-lg whitespace-pre min-w-[600px] inline-block">
     _______  _    _  _____  ______  ______     ____    _   __   __    _  __  _____  _   _   ____   _____    ____   __  __
@@ -77,17 +78,16 @@
 </div>
   </footer>
   <script>
-  const contactLink = document.querySelector('a[href="#contact"]');
-const contactBox = document.getElementById('contact-box');
-
-contactLink?.addEventListener('click', () => {
-  setTimeout(() => {
-    contactBox.classList.add('flash-border');
-    setTimeout(() => {
+      const contactLink = document.querySelector('a[href="#contact"]');
+      const contactBox = document.getElementById('contact');
+      contactLink?.addEventListener('click', () => {
+          setTimeout(() => {
+      contactBox.classList.add('flash-border');
+              setTimeout(() => {
       contactBox.classList.remove('flash-border');
-    }, 1000);
-  }, 400);
-});
+              }, 1000);
+          }, 400);
+      }); 
 </script>
 </body>
 </html>
