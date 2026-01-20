@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-     <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>三GAY志</title>
   <meta name="google-site-verification" content="dD8BLSdmLGFWDNZ_lxgi28iqK6gn1OapISj1-YDAPO4">
-  <link rel="icon" href="三GAY志.png" type="image/png">
-  <script src="https://cdn.tailwindcss.com"></script>
   <meta property="og:title" content="三GAY志">
   <meta property="og:description" content="四處「張」「楊」，重返亂世！">
   <meta property="og:image" content="三GAY志.png">
   <meta property="og:url" content="https://091cc.github.io/three-gay-kingdom/">
   <meta property="og:type" content="website">
-    <header class="bg-gray-900 text-white shadow-md fixed top-0 w-full z-50">
+  <link rel="icon" href="三GAY志.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .flash-border {
+      border: 2px solid #facc15;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      transition: border 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+<header class="bg-gray-900 text-white shadow-md fixed top-0 w-full z-50">
   <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-4">
     <a href="index.html" class="flex items-center space-x-3 mb-2 md:mb-0 hover:opacity-90 transition">
       <img src="三GAY志.png" alt="三GAY志 Logo" class="w-10 h-10 rounded">
@@ -21,69 +32,73 @@
     <nav class="flex flex-wrap items-center justify-center md:justify-end gap-4 text-sm">
       <a href="yang_quotes.html" class="hover:text-yellow-400 transition">楊語錄</a>
       <a href="shopping.html" class="hover:text-yellow-400 transition">周邊購物</a>
-      <a href="https://elcan1989.github.io/Yang-Life/index.html" class="hover:text-yellow-400 transition"><img src="https://elcan1989.github.io/Yang-Life/images/photo.png" alt="機智楊老生活" class="w-20 h-10 rounded"></a>
-      <a href="apple_daily.html" class="hover:text-yellow-400 transition"><img src="蘋果日報.jpg" alt="蘋果日報logo" class="w-20 h-10 rounded"></a>
+      <a href="https://elcan1989.github.io/Yang-Life/index.html" class="hover:text-yellow-400 transition">
+        <img src="https://elcan1989.github.io/Yang-Life/images/photo.png" class="w-20 h-10 rounded">
+      </a>
+      <a href="apple_daily.html" class="hover:text-yellow-400 transition">
+        <img src="蘋果日報.jpg" class="w-20 h-10 rounded">
+      </a>
       <a href="#contact" class="hover:text-yellow-400 transition">聯絡我們</a>
     </nav>
   </div>
 </header>
-<body class="bg-gray-900 text-white font-sans">
-<div class="bg-gray-800 p-6 rounded-xl flex items-start mt-24 ml-4 mr-4 max-w-xl gap-6">
-     <img class="w-40 h-auto rounded-lg flex-shrink-0" src="主席棉花.jpg" alt="主席棉花">
-     <div class="text-left">
-          <h2 class="text-xl font-bold text-yellow-400 ml-[8rem]">主席棉花</h2>
-          <lu class="text-sm text-gray-300 mt-2 leading-relaxed">
-               <li class="ml-[8rem]">未知。</li>
-               <li class="ml-[8rem]">無庫存。</li>
-          </lu>
-     </div>
-</div>
-</body>
-    <footer class="bg-gray-900 text-center py-6">
-    <div id="contact" class="scroll-mt-24 mb-6">
-      <p class="mb-4">聯絡和追蹤我們：</p>
-        <div class="flex justify-center space-x-6">
-          <a href="https://091cc.github.io/three-gay-kingdom/" class="hover:text-yellow-400">Website</a>
-          <a href="https://github.com/091cc" class="hover:text-yellow-400">Github</a>
-          <a href="https://www.instagram.com/three_gay_kingdomoffical?igsh=MTVxM2l4eGV1djl5bg%3D%3D" class="hover:text-yellow-400">Instagram</a>
-        </div>
+<main class="pt-28">
+  <div class="bg-gray-800 p-6 rounded-xl flex items-start mx-4 max-w-xl gap-6">
+    <img class="w-40 h-auto rounded-lg flex-shrink-0" src="主席棉花.jpg" alt="主席棉花">
+    <div class="text-left">
+      <h2 class="text-xl font-bold text-yellow-400 ml-[8rem]">主席棉花</h2>
+      <ul class="text-sm text-gray-300 mt-2 leading-relaxed">
+        <li class="ml-[8rem]">未知。</li>
+        <li class="ml-[8rem]">無庫存。</li>
+      </ul>
     </div>
-    <p class="text-sm mt-4 text-gray-500">© 2025 三GAY志遊戲開發團隊</p>
-    <div class="w-full overflow-x-auto bg-sky-500/10 py-6 px-2">
-      <pre class="text-yellow-400 font-mono text-[9px] sm:text-xs bg-gray-900 p-4 rounded-lg whitespace-pre min-w-[600px] inline-block">
-    _______  _    _  _____  ______  ______     ____    _   __   __    _  __  _____  _   _   ____   _____    ____   __  __
-    |__   __|| |  | ||  __ \|  ____||  ____|   / ___|  / \  \ \ / /   | |/ / |_   _|| \ | | / ___| |  __ \  / __ \ |  \/  |
-       | |   | |__| || |__)|| |__   | |__     | |  _  / _ \  \ V /    | ' /    | |  |  \| || |  _  | |  | || |  | || \  / |
-       | |   |  __  ||  _  /|  __|  |  __|    | |_| |/ ___ \  | |     |  <     | |  | . ` || | | | | |  | || |  | || |\/| |
-       | |   | |  | || | \ \| |____ | |____    \____/_/   \_\ |_|     | . \   _| |_ | |\  || |_| | | |__| || |__| || |  | |
-       |_|   |_|  |_||_|  \_\______||______|                          |_|\_\ |_____||_| \_| \____| |_____/  \____/ |_|  |_|
-      </pre>
+  </div>
+</main>
+<footer class="bg-gray-900 text-center py-6 mt-16">
+  <div id="contact" class="scroll-mt-24 mb-6">
+    <p class="mb-4">聯絡和追蹤我們：</p>
+    <div class="flex justify-center space-x-6">
+      <a href="https://091cc.github.io/three-gay-kingdom/" class="hover:text-yellow-400">Website</a>
+      <a href="https://github.com/091cc" class="hover:text-yellow-400">Github</a>
+      <a href="https://www.instagram.com/three_gay_kingdomoffical?igsh=MTVxM2l4eGV1djl5bg%3D%3D" class="hover:text-yellow-400">Instagram</a>
     </div>
-    <div class="mt-6 text-sm text-gray-400 text-center max-w-xl mx-auto">
-        本網站為<strong class="text-white">非營利、個人遊戲模擬展示用途</strong>，不會蒐集任何使用者資料，也不含任何下載連結（除非經使用者手動點擊）。所有內容皆為虛構，僅供娛樂。
-    </div>
-      <strong class="text-white">遊戲背景，皆非虛構。如有雷同，那就雷同。</strong>
-  <div class="fixed bottom-4 right-4 flex flex-col items-end space-y-2 z-50">
+  </div>
+  <p class="text-sm mt-4 text-gray-500">© 2026 三GAY志遊戲開發團隊</p>
+  <div class="w-full overflow-x-auto bg-sky-500/10 py-6 px-2">
+    <pre class="text-yellow-400 font-mono text-[9px] sm:text-xs bg-gray-900 p-4 rounded-lg whitespace-pre min-w-[600px] inline-block">
+_______  _    _  _____  ______  ______     ____    _   __   __    _  __  _____  _   _   ____   _____    ____   __  __
+|__   __|| |  | ||  __ \|  ____||  ____|   / ___|  / \  \ \ / /   | |/ / |_   _|| \ | | / ___| |  __ \  / __ \ |  \/  |
+   | |   | |__| || |__)|| |__   | |__     | |  _  / _ \  \ V /    | ' /    | |  |  \| || |  _  | |  | || |  | || \  / |
+   | |   |  __  ||  _  /|  __|  |  __|    | |_| |/ ___ \  | |     |  <     | |  | . ` || | | | | |  | || |  | || |\/| |
+   | |   | |  | || | \ \| |____ | |____    \____/_/   \_\ |_|     | . \   _| |_ | |\  || |_| | | |__| || |__| || |  | |
+   |_|   |_|  |_||_|  \_\______||______|                          |_|\_\ |_____||_| \_| \____| |_____/  \____/ |_|  |_|
+    </pre>
+  </div>
+  <div class="mt-6 text-sm text-gray-400 max-w-xl mx-auto">
+    本網站為<strong class="text-white">非營利、個人遊戲模擬展示用途</strong>，不會蒐集任何使用者資料，也不含任何下載連結（除非經使用者手動點擊）。所有內容皆為虛構，僅供娛樂。
+  </div>
+  <strong class="block mt-4 text-white">遊戲背景，皆非虛構。如有雷同，那就雷同。</strong>
+
+  <div class="fixed bottom-4 right-4 flex flex-col items-end z-50">
     <a href="https://www.instagram.com/three_gay_kingdomoffical?igsh=MTVxM2l4eGV1djl5bg%3D%3D"
-      target="_blank"
-      class="bg-pink-500 hover:bg-pink-600 text-white font-bold px-4 py-2 rounded-full shadow-lg flex items-center space-x-2">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="w-5 h-5" />
+       target="_blank"
+       class="bg-pink-500 hover:bg-pink-600 text-white font-bold px-4 py-2 rounded-full shadow-lg flex items-center space-x-2">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="w-5 h-5">
       <span>IG</span>
     </a>
   </div>
 </footer>
+
 <script>
-     const contactLink = document.querySelector('a[href="#contact"]');
-     const contactTarget = document.getElementById('contact');
+  const contactLink = document.querySelector('a[href="#contact"]');
+  const contactTarget = document.getElementById('contact');
+
   contactLink.addEventListener('click', () => {
     setTimeout(() => {
       contactTarget.classList.add('flash-border');
-      setTimeout(() => {
-        contactTarget.classList.remove('flash-border');
-      }, 1000);
+      setTimeout(() => contactTarget.classList.remove('flash-border'), 1000);
     }, 400);
   });
-  </script>
 </script>
 </body>
 </html>
